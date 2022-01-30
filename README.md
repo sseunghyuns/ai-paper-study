@@ -7,17 +7,17 @@
 ## 논문 리스트
 
 - [mixup: Beyond Empirical Risk Minimization](#mixup-beyond-empirical-risk-minimization)
-- [CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features](#no2)
-- [Rethinking the Inception Architecture for Computer Vision](#no3)
-- [Very Deep Convolutional Networks for Large-Scale Image Recognition](#no4)
-- [Deep Residual Learning for Image Recognition](#no5)
-- [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](#no6)
-- [Densely Connected Convolutional Networks](#no7)
-- [SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#no8)
-- [U-Net: Convolutional Networks for Biomedical Image Segmentation](#no9)
-- [UPSNet: A Unified Panoptic Segmentation Network](#no10)
-- [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](#no11)
-- [YOLOv4: Optimal Speed and Accuracy of Object Detection](#no12)
+- [CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features](#cutMix-regularization-strategy-to-train-strong-classifiers-with-localizable-features)
+- [Rethinking the Inception Architecture for Computer Vision](#rethinking-the-inception-architecture-for-computer-vision)
+- [Very Deep Convolutional Networks for Large-Scale Image Recognition](#very-deep-convolutional-networks-for-large-scale-image-recognition)
+- [Deep Residual Learning for Image Recognition](#deep-residual-learning-for-image-recognition)
+- [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](#efficientNet-rethinking-model-scaling-for-convolutional-neural-networks)
+- [Densely Connected Convolutional Networks](#densely-connected-convolutional-networks)
+- [SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#squeezenet-alexnet-level-accuracy-with-50x-fewer-parameters-and<0.5MB-model-size)
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation](#u-net-convolutional-networks-for-biomedical-image-segmentation)
+- [UPSNet: A Unified Panoptic Segmentation Network](#upsnet-a-unified-panoptic-segmentation-network)
+- [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](#faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks)
+- [YOLOv4: Optimal Speed and Accuracy of Object Detection](#yolov4-optimal-speed-and-accuracy-of-object-detection)
 
 ---
 
