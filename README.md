@@ -6,7 +6,7 @@
 
 ## 논문 리스트
 
-- [mixup: Beyond Empirical Risk Minimization](#mixup: Beyond Empirical Risk Minimization)
+- [mixup: Beyond Empirical Risk Minimization](#mixup-beyond-empirical-risk-minimization)
 - [CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features](#no2)
 - [Rethinking the Inception Architecture for Computer Vision](#no3)
 - [Very Deep Convolutional Networks for Large-Scale Image Recognition](#no4)
