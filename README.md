@@ -2,9 +2,15 @@
 
 딥러닝 관련 논문들의 핵심 아이디어를 정리해놓은 저장소입니다.
 
+---
+
+## 논문 리스트
 
 - [mixup: Beyond Empirical Risk Minimization](#no1)
 
+---
+
+## Quick paper reviews
 
 ### mixup: Beyond Empirical Risk Minimization
 
