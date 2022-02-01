@@ -36,3 +36,9 @@
 - 신경망을 혼란시킬 목적으로 만들어진 특수한 입력으로, 신경망으로 하여금 샘플을 잘못 분류하도록 한다. 비록 인간에게 적대적 샘플은 일반 샘플과 큰 차이가 없어보이지만, 신경망은 적대적 샘플을 올바르게 식별하지 못한다.  - [Tensorflow](https://www.tensorflow.org/tutorials/generative/adversarial_fgsm?hl=ko)
 
 ---
+
+### Very Deep Convolutional Networks for Large-Scale Image Recognition
+
+ImageNet Challenge 2014에서
+- Increasing Depth
+- Using small($3 \times3)$ convolution filters
