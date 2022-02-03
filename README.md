@@ -7,9 +7,9 @@
 ## 논문 리스트
 
 - [mixup: Beyond Empirical Risk Minimization](#1)
+- [Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
 - [CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features](#cutMix-regularization-strategy-to-train-strong-classifiers-with-localizable-features)
 - [Rethinking the Inception Architecture for Computer Vision](#rethinking-the-inception-architecture-for-computer-vision)
-- [Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
 - [Deep Residual Learning for Image Recognition](#deep-residual-learning-for-image-recognition)
 - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](#efficientNet-rethinking-model-scaling-for-convolutional-neural-networks)
 - [Densely Connected Convolutional Networks](#densely-connected-convolutional-networks)
