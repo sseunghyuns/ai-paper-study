@@ -30,7 +30,7 @@ VGGNet는 기존 `(Convolutional Layers → Pooling layers)의 반복 → Fully 
 
 VGGNet의 핵심은 기존 CNN에서 사용되었던 <img src="https://latex.codecogs.com/svg.image?7&space;\times&space;7,&space;\;&space;5&space;\times&space;5" title="7 \times 7, \; 5 \times 5" /> 크기의 필터들을 사용하지 않고 여러개의 <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3" title="3 \times 3" /> 필터로 쪼개어 사용함으로써 레이어를 더욱 깊게 쌓을 수 있었다는 것이다.  모든 Convolutional layers에서 비교적 작은 여러개의  <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3&space;" title="3 \times 3 " /> 필터만을 사용하게 되면 적은 파라미터 수로 깊게 레이어를 쌓을 수 있음과 동시에 여러 개의 비선형 함수를 사용할 수 있게 되므로 이를 통해 모델의 성능을 높일 수 있었다.
 
-$**3  \times 3$  필터 사용의 장점**
+**<img src="https://latex.codecogs.com/svg.image?3&space;&space;\times&space;3" title="3 \times 3" />**  필터 사용의 장점**
 
 - 파라미터 수의 감소로 모델을 더욱 깊게 쌓을 수 있었다.
 - 비선형성 증가로, 모델의 이미지 특징 식별성을 높인다.(Makes the decision function more discriminative.)
