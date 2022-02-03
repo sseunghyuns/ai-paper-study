@@ -37,7 +37,7 @@ VGGNet의 핵심은 기존 CNN에서 사용되었던 <img src="https://latex.cod
 
 작은 필터 크기를 사용하여 모델의 깊이를 점차 늘려간다면, 파라미터의 수는 어쨌든 증가할 것이다. 이로 인해 한정된 학습 데이터에 대해 과적합 문제가 일어날 수 있고, 모델 깊이가 깊어짐에 따라 gradient vanishing/exploding 문제가 발생할 수 있을 것이다. 따라서 저자는 다음과 같은 기법을 사용하여 이러한 문제를 해결하였다고 한다.
 
-- 과적합 문제→**Multi-Scale training(Scale Jittering)**이라는 data augmentation 기법을 적용
+- 과적합 문제→Multi-Scale training(Scale Jittering)이라는 data augmentation 기법을 적용
 - gradient 불안정 문제→얕은 모델에서 어느정도 학습된 가중치를 더욱 깊은 모델의 초기 가중치로 사용
 
 정리하자면, VGGNet은 <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3&space;" title="3 \times 3 " /> 이라는 작은 필터 크기로 모델을 깊게 쌓아 학습을 진행하였고, 깊어진 모델로 인해 발생할 수 있는 과적합 문제와 gradient 불안정 문제를 각각 data augmentation과 가중치 초기화 전략으로 해결한 것입니다.
@@ -69,7 +69,7 @@ VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 
 
 VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다. 
 
-### $3 \times3$ 크기의 필터 사용
+### <img src="https://latex.codecogs.com/svg.image?3&space;&space;\times&space;3" title="3 \times 3" /> 크기의 필터 사용
 
 - 하나의 <img src="https://latex.codecogs.com/svg.image?7&space;\times&space;7" title="7 \times 7" /> 필터 대신 3개의 <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3" title="3 \times 3" /> 필터를 사용하였다.
     
@@ -79,7 +79,7 @@ VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다.
     
 - 이처럼 작은 receptive field를 여러개 사용했을 때의 장점은 아래와 같다.
     1. Decision function의 **비선형성 증가**
-        - 한개의 $7 \times7$ 필터를 사용하게 되면 하나의 ReLU를 사용해야하지만, 3차례의 $3 \times 3$ 필터를 사용한다면 3번의 ReLU 활성함수를 적용할 수 있게 된다.
+        - 한개의 <img src="https://latex.codecogs.com/svg.image?7&space;\times7" title="7 \times7" /> 필터를 사용하게 되면 하나의 ReLU를 사용해야하지만, 3차례의 <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3" title="3 \times 3" /> 필터를 사용한다면 3번의 ReLU 활성함수를 적용할 수 있게 된다.
             
             ![비선형함수 ReLU를 통과했을 경우, 선형함수만으로는 풀 수 없었던 XOR 문제를 해결할 수 있게 된다.](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.35.51.png)
             
@@ -132,7 +132,7 @@ VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다.
 
 ![스크린샷 2022-02-02 오후 1.07.56.png](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.07.56.png)
 
-여기서 **single-scale training**이란 <img src="https://latex.codecogs.com/svg.image?S" title="S" />를 하나의 값으로 고정시켜놓고 데이터를 생성하는 것을 의미하고**, multi-scale training**는 **$<img src="https://latex.codecogs.com/svg.image?S&space;\in&space;[S_{min},&space;S_{max}]" title="S \in [S_{min}, S_{max}]" />$**로 범위를 설정하여 여러 <img src="https://latex.codecogs.com/svg.image?S" title="S" /> 값들을 사용하는 것을 의미한다. 논문에서는 multi-scale training 시 <img src="https://latex.codecogs.com/svg.image?S_{min}&space;=256,&space;\;&space;\;&space;S_{max}=512" title="S_{min} =256, \; \; S_{max}=512" />로 설정했다. 또한 single-scale training을 사용했을 때보다 multi-scale training을 사용했을 때  모델 성능이 더 좋았다고 한다.(이후 [성능 관련](https://www.notion.so/Very-Deep-Convolutional-Networks-for-Large-Scale-Image-Recognition-f8970a0f246a4edf8472719ea22b179f) 부분에서 자세한 설명)
+여기서 **single-scale training**이란 <img src="https://latex.codecogs.com/svg.image?S" title="S" />를 하나의 값으로 고정시켜놓고 데이터를 생성하는 것을 의미하고**, multi-scale training**는 **<img src="https://latex.codecogs.com/svg.image?S&space;\in&space;[S_{min},&space;S_{max}]" title="S \in [S_{min}, S_{max}]" />**로 범위를 설정하여 여러 <img src="https://latex.codecogs.com/svg.image?S" title="S" /> 값들을 사용하는 것을 의미한다. 논문에서는 multi-scale training 시 <img src="https://latex.codecogs.com/svg.image?S_{min}&space;=256,&space;\;&space;\;&space;S_{max}=512" title="S_{min} =256, \; \; S_{max}=512" />로 설정했다. 또한 single-scale training을 사용했을 때보다 multi-scale training을 사용했을 때  모델 성능이 더 좋았다고 한다.(이후 [성능 관련](https://www.notion.so/Very-Deep-Convolutional-Networks-for-Large-Scale-Image-Recognition-f8970a0f246a4edf8472719ea22b179f) 부분에서 자세한 설명)
 
 이러한 방법을 통해 data augmentation 효과를 얻을 수 있었고, 하나의 이미지에 대한 다양한 측면(ex. 사슴의 머리, 몸통, 다리 등)을 학습시킬 수 있어 overfitting을 방지할 수 있다.
 
