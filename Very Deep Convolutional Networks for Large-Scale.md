@@ -28,7 +28,7 @@ VGG: Visual Geometry Group(옥스포드 대학의 연구팀)
 
 VGGNet는 기존 `(Convolutional Layers → Pooling layers)의 반복 → Fully connected Layers` 의 전통적인 CNN 구조를 크게 벗어나지 않으면서, 레이어를 깊게 쌓아 2014 ILSVRC 이미지 분류 대회에서 2위를 달성하였다. (1위 GoogleNet)
 
-VGGNet의 핵심은 기존 CNN에서 사용되었던 $7 \times 7, \; 5 \times 5$ 크기의 필터들을 사용하지 않고 여러개의 $3 \times 3$ 필터로 쪼개어 사용함으로써 레이어를 더욱 깊게 쌓을 수 있었다는 것이다.  모든 Convolutional layers에서 비교적 작은 여러개의  $3 \times 3$ 필터만을 사용하게 되면 적은 파라미터 수로 깊게 레이어를 쌓을 수 있음과 동시에 여러 개의 비선형 함수를 사용할 수 있게 되므로 이를 통해 모델의 성능을 높일 수 있었다.
+VGGNet의 핵심은 기존 CNN에서 사용되었던 <img src="https://latex.codecogs.com/svg.image?7&space;\times&space;7,&space;\;&space;5&space;\times&space;5" title="7 \times 7, \; 5 \times 5" /> 크기의 필터들을 사용하지 않고 여러개의 <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3" title="3 \times 3" /> 필터로 쪼개어 사용함으로써 레이어를 더욱 깊게 쌓을 수 있었다는 것이다.  모든 Convolutional layers에서 비교적 작은 여러개의  <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3&space;" title="3 \times 3 " /> 필터만을 사용하게 되면 적은 파라미터 수로 깊게 레이어를 쌓을 수 있음과 동시에 여러 개의 비선형 함수를 사용할 수 있게 되므로 이를 통해 모델의 성능을 높일 수 있었다.
 
 $**3  \times 3$  필터 사용의 장점**
 
@@ -40,7 +40,7 @@ $**3  \times 3$  필터 사용의 장점**
 - 과적합 문제→**Multi-Scale training(Scale Jittering)**이라는 data augmentation 기법을 적용
 - gradient 불안정 문제→얕은 모델에서 어느정도 학습된 가중치를 더욱 깊은 모델의 초기 가중치로 사용
 
-정리하자면, VGGNet은 $3 \times 3$ 이라는 작은 필터 크기로 모델을 깊게 쌓아 학습을 진행하였고, 깊어진 모델로 인해 발생할 수 있는 과적합 문제와 gradient 불안정 문제를 각각 data augmentation과 가중치 초기화 전략으로 해결한 것입니다.
+정리하자면, VGGNet은 <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3&space;" title="3 \times 3 " /> 이라는 작은 필터 크기로 모델을 깊게 쌓아 학습을 진행하였고, 깊어진 모델로 인해 발생할 수 있는 과적합 문제와 gradient 불안정 문제를 각각 data augmentation과 가중치 초기화 전략으로 해결한 것입니다.
 
 VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 성능을 보여 지금까지도 많은 주목을 받고 있다. 
 
@@ -61,8 +61,8 @@ VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 
 총 6개의 모델에 대해 학습을 진행하였고, 구성은 다음과 같다.
 
 - 11 ~ 19개의 Convolutional Layers + 3개의 Fully-Connected Layers
-- $3 \times 3$ Convolutional filters 사용. (Stride=1, Zero-Padding=1)
-- $2  \times 2$ Max Pooling(Stride=2)
+- <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3&space;" title="3 \times 3 " /> Convolutional filters 사용. (Stride=1, Zero-Padding=1)
+- <img src="https://latex.codecogs.com/svg.image?2&space;&space;\times&space;2" title="2 \times 2" /> Max Pooling(Stride=2)
 - ReLU 활성화 함수 사용
 
 ![VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다. ](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_5.48.03.png)
@@ -71,7 +71,7 @@ VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다.
 
 ### $3 \times3$ 크기의 필터 사용
 
-- 하나의 $7 \times 7$ 필터 대신 3개의 $3 \times 3$ 필터를 사용하였다.
+- 하나의 <img src="https://latex.codecogs.com/svg.image?7&space;\times&space;7" title="7 \times 7" /> 필터 대신 3개의 <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3" title="3 \times 3" /> 필터를 사용하였다.
     
     ![3차례의 3x3 conv 필터링을 반복한 특징맵은 한번의 7x7 conv 필터링을 적용한 효과를 볼 수 있다. 출처: [1]](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.40.14.png)
     
@@ -86,7 +86,7 @@ VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다.
             비선형함수 ReLU를 통과했을 경우, 선형함수만으로는 풀 수 없었던 XOR 문제를 해결할 수 있게 된다.
             
     2. **학습 파라미터 수의 감소**
-        - Input, Output 모두 C 개의 채널을 갖는다고 하자. 3x3 필터 세 개의 경우  $3 \times 3^2 C^2=27C^2$개의 파라미터를 갖게 되고, 7x7 필터 한 개의 경우 $7^2C^2 = 49C^2$개의 파라미터를 갖게 된다.
+        - Input, Output 모두 C 개의 채널을 갖는다고 하자. 3x3 필터 세 개의 경우  <img src="https://latex.codecogs.com/svg.image?3&space;\times&space;3^2&space;C^2=27C^2" title="3 \times 3^2 C^2=27C^2" />개의 파라미터를 갖게 되고, 7x7 필터 한 개의 경우 <img src="https://latex.codecogs.com/svg.image?7^2C^2&space;=&space;49C^2" title="7^2C^2 = 49C^2" />개의 파라미터를 갖게 된다.
         
 
 > 같은 결과에 대해 더 적은 파라미터 수를 사용하여 overfitting을 줄이는 효과가 있고(**regularisation**), 비선형 함수를 더 많이 통과함으로써 모델이 의사 결정을 더 잘할 수 있도록 한다.
@@ -110,29 +110,29 @@ VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다.
 학습은 learning rate가 세번 감소(0.01 → 0.00001)하고 난 후 74 epoch에서 종료되었다. 여기서 주목할만한 부분은, AlexNet보다 더 깊은 레이어와 더 많은 파라미터 수임에도 불구하고 더 적은 epoch으로 빠르게 수렴했다는 것이다. 그 이유를 논문의 저자는 아래 두 가지로 설명하고 있다. (*참고: AlexNet은 8개의 레이어와 61,000,000(61 millions)개의 파리미터 수를 가진다. VGG는 VGG16 기준 16개의 레이어와 138,000,000(138 millions)개의 파라미터 수를 가진다.*)
 
 1. **Implicit Regularisation** - 3x3 convolution filters의 사용
-2. **Pre-initialisation of certain layers** -  깊은 신경망을 가진 모델일수록, 가중치 초기화 방법에 따라 학습이 불안정하게 이루어질 수도 있다. 따라서 저자는 이러한 문제를 해결하고자 비교적 얕은 신경망을 가진 모델 A로 학습된 가중치를 이후 더 깊은 모델 학습 시 초기 가중치로 사용하였다. (더욱 정확하게는 모델 A의 처음 4개의 convolutional layer와 마지막 3개의 fully-connected layer의 가중치를 사용하였다. 일종의 transfer learning을 진행한 것.) 이때 모델 A 학습시 초기 가중치는 $N(0, 0.1^2)$로 초기화하였다.
+2. **Pre-initialisation of certain layers** -  깊은 신경망을 가진 모델일수록, 가중치 초기화 방법에 따라 학습이 불안정하게 이루어질 수도 있다. 따라서 저자는 이러한 문제를 해결하고자 비교적 얕은 신경망을 가진 모델 A로 학습된 가중치를 이후 더 깊은 모델 학습 시 초기 가중치로 사용하였다. (더욱 정확하게는 모델 A의 처음 4개의 convolutional layer와 마지막 3개의 fully-connected layer의 가중치를 사용하였다. 일종의 transfer learning을 진행한 것.) 이때 모델 A 학습시 초기 가중치는 <img src="https://latex.codecogs.com/svg.image?N(0,&space;0.1^2)" title="N(0, 0.1^2)" />로 초기화하였다.
 
 ### Data Augmentation
 
-다음으로는 **학습 시 이미지의 크기**에 관한 부분이다. 인풋 이미지의 크기는 $224 \times 224$로 고정하였다. 이때 저자는 이러한 고정된 크기의 이미지를 만들기 위해 **single-scale trianing**, **multi-scale training** 두 가지 방법을 고려했다고 한다. 
+다음으로는 **학습 시 이미지의 크기**에 관한 부분이다. 인풋 이미지의 크기는 <img src="https://latex.codecogs.com/svg.image?224&space;\times&space;224" title="224 \times 224" />로 고정하였다. 이때 저자는 이러한 고정된 크기의 이미지를 만들기 위해 **single-scale trianing**, **multi-scale training** 두 가지 방법을 고려했다고 한다. 
 
-먼저 기존 이미지의 비율을 유지하며 가로 세로 크기를 $S \geq224$ 로 rescale해준다. (비율을 유지하며 사이즈를 rescaling하는 것을 isotropically-rescale이라고 한다.)
+먼저 기존 이미지의 비율을 유지하며 가로 세로 크기를 <img src="https://latex.codecogs.com/svg.image?S&space;\geq224" title="S \geq224" /> 로 rescale해준다. (비율을 유지하며 사이즈를 rescaling하는 것을 isotropically-rescale이라고 한다.)
 
 ![출처: [1]](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.00.32.png)
 
 출처: [1]
 
-그 후, 모델의 인풋 크기($224  \times 224)$에 맞게 랜덤하게 crop하여 데이터를 생성한다.
+그 후, 모델의 인풋 크기<img src="https://latex.codecogs.com/svg.image?(224&space;&space;\times&space;224)&space;" title="(224 \times 224) " />에 맞게 랜덤하게 crop하여 데이터를 생성한다.
 
 ![스크린샷 2022-02-02 오후 1.04.07.png](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.04.07.png)
 
-아래와 같이 같은 $256 \times 256$ , 혹은 $512 \times 512$ 이미지라 하더라도, 각기 다른 인풋 이미지가 생성되는 것을 확인할 수 있다. 
+아래와 같이 같은 <img src="https://latex.codecogs.com/svg.image?256&space;\times&space;256" title="256 \times 256" /> , 혹은 <img src="https://latex.codecogs.com/svg.image?512&space;\times&space;512" title="512 \times 512" /> 이미지라 하더라도, 각기 다른 인풋 이미지가 생성되는 것을 확인할 수 있다. 
 
 ![스크린샷 2022-02-02 오후 1.04.25.png](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.04.25.png)
 
 ![스크린샷 2022-02-02 오후 1.07.56.png](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.07.56.png)
 
-여기서 **single-scale training**이란 $S$를 하나의 값으로 고정시켜놓고 데이터를 생성하는 것을 의미하고**, multi-scale training**는 **$S \in [S_{min}, S_{max}]$**로 범위를 설정하여 여러 $S$ 값들을 사용하는 것을 의미한다. 논문에서는 multi-scale training 시 $S_{min} =256, \; \; S_{max}=512$로 설정했다. 또한 single-scale training을 사용했을 때보다 multi-scale training을 사용했을 때  모델 성능이 더 좋았다고 한다.(이후 [성능 관련](https://www.notion.so/Very-Deep-Convolutional-Networks-for-Large-Scale-Image-Recognition-f8970a0f246a4edf8472719ea22b179f) 부분에서 자세한 설명)
+여기서 **single-scale training**이란 <img src="https://latex.codecogs.com/svg.image?S" title="S" />를 하나의 값으로 고정시켜놓고 데이터를 생성하는 것을 의미하고**, multi-scale training**는 **$<img src="https://latex.codecogs.com/svg.image?S&space;\in&space;[S_{min},&space;S_{max}]" title="S \in [S_{min}, S_{max}]" />$**로 범위를 설정하여 여러 <img src="https://latex.codecogs.com/svg.image?S" title="S" /> 값들을 사용하는 것을 의미한다. 논문에서는 multi-scale training 시 <img src="https://latex.codecogs.com/svg.image?S_{min}&space;=256,&space;\;&space;\;&space;S_{max}=512" title="S_{min} =256, \; \; S_{max}=512" />로 설정했다. 또한 single-scale training을 사용했을 때보다 multi-scale training을 사용했을 때  모델 성능이 더 좋았다고 한다.(이후 [성능 관련](https://www.notion.so/Very-Deep-Convolutional-Networks-for-Large-Scale-Image-Recognition-f8970a0f246a4edf8472719ea22b179f) 부분에서 자세한 설명)
 
 이러한 방법을 통해 data augmentation 효과를 얻을 수 있었고, 하나의 이미지에 대한 다양한 측면(ex. 사슴의 머리, 몸통, 다리 등)을 학습시킬 수 있어 overfitting을 방지할 수 있다.
 
@@ -142,11 +142,11 @@ VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다.
 
 ‘Test’라고 하지만, 저자가 논문에서 `We used the validation as the test set.` 라고 언급했듯이, validation을 의미하는 것 같다. 앞으로 `테스트(test)`를 validation이라고 생각하자.
 
-테스트 시에도 multi-scale을 적용하였다. Train 시 rescale의 기준이 되는 값을 $S$라고 했다면, test 시에는 기준 값을 $Q$라고 부른다. (두 값이 의미하는 것은 동일하다.)
+테스트 시에도 multi-scale을 적용하였다. Train 시 rescale의 기준이 되는 값을 <img src="https://latex.codecogs.com/svg.image?S" title="S" />라고 했다면, test 시에는 기준 값을 <img src="https://latex.codecogs.com/svg.image?Q" title="Q" />라고 부른다. (두 값이 의미하는 것은 동일하다.)
 
-먼저 Test scale 파라미터 $Q$ 를 조절함으로써 하나의 테스트 이미지에서 여러 개의 데이터를 추출한다. 이렇게 여러개의 데이터를 예측한 결과의 평균(Sum-pooling)으로 최종 분류 결과를 구할 수 있다. Rescaling 시 $Q$는 꼭 $S$와 같을 필요가 없고, 실제로 각각의 $S$마다 여러 $Q$를 사용했을 때 모델의 성능이 더 좋게 나왔다고 한다.(5. 모델 성능 파트에서 확인할 수 있다.)
+먼저 Test scale 파라미터 <img src="https://latex.codecogs.com/svg.image?Q" title="Q" /> 를 조절함으로써 하나의 테스트 이미지에서 여러 개의 데이터를 추출한다. 이렇게 여러개의 데이터를 예측한 결과의 평균(Sum-pooling)으로 최종 분류 결과를 구할 수 있다. Rescaling 시 <img src="https://latex.codecogs.com/svg.image?Q" title="Q" />는 꼭 <img src="https://latex.codecogs.com/svg.image?S" title="S" />와 같을 필요가 없고, 실제로 각각의 <img src="https://latex.codecogs.com/svg.image?S" title="S" />마다 여러 <img src="https://latex.codecogs.com/svg.image?Q" title="Q" />를 사용했을 때 모델의 성능이 더 좋게 나왔다고 한다.(5. 모델 성능 파트에서 확인할 수 있다.)
 
-또한 Test할 때의 모델 구조를 Train때와는 다르게 하여 검증을 진행하기도 했다. 훈련 후 test 시에는 모델의 마지막 3 Fully-connected layers를 Convolutional layers로 변환하였다. 첫 번째 Fully-connected layer는 $7 \times7$ Conv, 마지막 두 Fully-connected layers는 $1 \times 1$ Conv로 변환하였는데, 이렇게 Fully-connected layers 없이 Convolutional layers로만 구성된 모델 구조를 **Fully-convolutional Network**라고 부른다.(이렇게 구조를 바꾸어 테스트한 방식을 **dense-evaluation**이라고 한다.[6])
+또한 Test할 때의 모델 구조를 Train때와는 다르게 하여 검증을 진행하기도 했다. 훈련 후 test 시에는 모델의 마지막 3 Fully-connected layers를 Convolutional layers로 변환하였다. 첫 번째 Fully-connected layer는 <img src="https://latex.codecogs.com/svg.image?7&space;\times7" title="7 \times7" /> Conv, 마지막 두 Fully-connected layers는 <img src="https://latex.codecogs.com/svg.image?1&space;\times&space;1" title="1 \times 1" /> Conv로 변환하였는데, 이렇게 Fully-connected layers 없이 Convolutional layers로만 구성된 모델 구조를 **Fully-convolutional Network**라고 부른다.(이렇게 구조를 바꾸어 테스트한 방식을 **dense-evaluation**이라고 한다.[6])
 
 ![출처: [3]](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.08.02.png)
 
@@ -174,7 +174,7 @@ VGG 모델 아키텍처. 11 ~ 19까지 레이어 수를 점차 늘려갔다.
 
 Single-test-scale 적용 시 결과
 
-$Q$(test scale)를 고정시켰을 때의 모델 성능이다. 다음과 같은 결과를 확인할 수 있다.
+<img src="https://latex.codecogs.com/svg.image?Q" title="Q" />(test scale)를 고정시켰을 때의 모델 성능이다. 다음과 같은 결과를 확인할 수 있다.
 
 - Layer가 깊어질수록 모델의 성능이 증가하고 있다.
 - 같은 depth이지만, 1x1와 3x3 conv layer의 차이만 있었던 C와 D를 비교했을 때, D의 성능이 더 높았다. 여기서 모델 C를 모델B와 비교해봤을 때 1x1 conv.layer를 사용함으로써 non-linearity 추가한 것이 물론 도움이 되지만, 1x1에 비해 3x3를 사용했을 때의 성능이 더 높았던 이유는 더 큰 spatial context를 고려할 수 있어야 하는 것 역시 중요하다는 것을 알수 있다.
@@ -187,10 +187,10 @@ $Q$(test scale)를 고정시켰을 때의 모델 성능이다. 다음과 같은 
 
 Multi-test-scale 적용 시 결과
 
-- Train뿐만 아니라 Test 시에도 Multi-scale을 적용했을 때 더 높은 모델 성능을 보여주었다. Test시에는 3개의 $Q$에 대해 모델 예측값을 추출한 다음, 평균을 내는 식으로 계산했다.
+- Train뿐만 아니라 Test 시에도 Multi-scale을 적용했을 때 더 높은 모델 성능을 보여주었다. Test시에는 3개의 <img src="https://latex.codecogs.com/svg.image?Q" title="Q" />에 대해 모델 예측값을 추출한 다음, 평균을 내는 식으로 계산했다.
 - 이때 train 데이터 분포 test 데이터 분포 사이 너무 큰 차이가 발생하면 안되므로,
-    - single-scale training 경우, test scale $Q$를 $\{S-32, S, S+32 \}$로 설정하였다.
-    - multi-scale training 경우, test scale $Q$를 $\{S_{min}, 0.5(S_{min} + S_{max}), S_{max}\}$로 설정하였다.
+    - single-scale training 경우, test scale <img src="https://latex.codecogs.com/svg.image?Q" title="Q" />를 <img src="https://latex.codecogs.com/svg.image?\{S-32,&space;S,&space;S&plus;32&space;\}" title="\{S-32, S, S+32 \}" />로 설정하였다.
+    - multi-scale training 경우, test scale <img src="https://latex.codecogs.com/svg.image?Q" title="Q" />를 <img src="https://latex.codecogs.com/svg.image?\{S_{min},&space;0.5(S_{min}&space;&plus;&space;S_{max}),&space;S_{max}\}" title="\{S_{min}, 0.5(S_{min} + S_{max}), S_{max}\}" />로 설정하였다.
 
 ### 5-3. Multi-Crop & dense evaluation 결과
 
@@ -236,13 +236,13 @@ VGG 모델은 기존의 전통적인 CNN 모델 구조에서 크게 벗어나지
     ![스크린샷 2021-11-09 오후 9.09.32.png](Very%20Deep%20Convolutional%20Networks%20for%20Large-Scale%20I%2054acd91fb9bc4515a866e0998d84919a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-11-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_9.09.32.png)
     
     - 이전 batch에서 특정 방향으로 gradient가 흘러가면, 그 정보를 활용하는 옵티마이저이다.
-    - $g_t$라는 gradient가 현재 들어왔다면,  모멘텀에 해당하는 $\beta$ 하이퍼파라미터 * $a_t$ 한 모멘텀이 포함되어있는 gradient(accumulation)으로 업데이트를 해주는 것이다.
+    - <img src="https://latex.codecogs.com/svg.image?g_t" title="g_t" />라는 gradient가 현재 들어왔다면,  모멘텀에 해당하는 <img src="https://latex.codecogs.com/svg.image?\beta" title="\beta" /> 하이퍼파라미터 * <img src="https://latex.codecogs.com/svg.image?a_t" title="a_t" /> 한 모멘텀이 포함되어있는 gradient(accumulation)으로 업데이트를 해주는 것이다.
     - 한번 흘러가는 gradient를 어느 정도 유지시켜주기 때문에 학습이 잘 될 수 있다는 장점이 있다.
 
 1. **Multinomial Logistic Regression**
     - Cross Entropy Loss를 의미한다.
 
-1. $1\times1$ **Convolution을 사용하는 이유**
+1. <img src="https://latex.codecogs.com/svg.image?1&space;\times&space;1" title="1 \times 1" /> **Convolution을 사용하는 이유**
     - 채널 수 조절 가능
     - 연산량의 감소(파라미터 수 감소)
 
@@ -250,7 +250,7 @@ VGG 모델은 기존의 전통적인 CNN 모델 구조에서 크게 벗어나지
 
 똑같이 output의 채널 수를 128개로 만들지만, 1x1 Conv를 사용했을 때의 파라미터 수가 훨씬 적다. 이처럼 1x1로 채널을 감소시키고 다시 늘리는 구조를 bottle neck 구조라고 한다. 출처: [7]
 
-- 비선형성(Non-linearity) - $1 \times 1$  Conv를 사용할때마다 비선형 활성 함수(ex. ReLU)를 사용하게 된다.
+- 비선형성(Non-linearity) - <img src="https://latex.codecogs.com/svg.image?1&space;\times&space;1" title="1 \times 1" />  Conv를 사용할때마다 비선형 활성 함수(ex. ReLU)를 사용하게 된다.
 
 1. **Fully-convolutional network**
     - FCN은 Semantic Segmentation task에 적합한 모델을 위해 기존에 이미지 분류에서 우수한 성능을 보인 CNN 기반 모델(AlexNet, VGG16, GoogLeNet)을 목적에 맞춰 변형시킨 것이다.[7] 대부분의 이미지 분류 모델들은 Convolutional layer에서 이미지의 특징을 추출하고, 추출된 특징으로 class를 분류를 위해 출력층이 fully-connected layer로 이루어져 있다.
