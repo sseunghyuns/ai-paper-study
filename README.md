@@ -41,7 +41,7 @@ VGGNet의 핵심은 기존 CNN에서 사용되었던 7x7, 5x5 크기의 필터�
 
 작은 필터 크기를 사용하여 모델의 깊이를 점차 늘려간다면, 파라미터의 수는 어쨌든 증가할 것이다. 이로 인해 한정된 학습 데이터에 대해 과적합 문제가 일어날 수 있고, 모델 깊이가 깊어짐에 따라 gradient vanishing/exploding 문제가 발생할 수 있을 것이다. 따라서 저자는 다음과 같은 기법을 사용하여 이러한 문제를 해결하였다고 한다.
 
-- 과적합 문제→ **Multi-Scale training(Scale Jittering)**이라는 data augmentation 기법을 적용
+- 과적합 문제→ Multi-Scale training(Scale Jittering)이라는 data augmentation 기법을 적용
 - gradient 불안정 문제→얕은 모델에서 어느정도 학습된 가중치를 더욱 깊은 모델의 초기 가중치로 사용
 
 정리하자면, VGGNet은 3x3 이라는 작은 필터 크기로 모델을 깊게 쌓아 학습을 진행하였고, 깊어진 모델로 인해 발생할 수 있는 과적합 문제와 gradient 불안정 문제를 각각 data augmentation과 가중치 초기화 전략으로 해결한 것이다.
