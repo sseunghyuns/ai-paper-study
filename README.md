@@ -8,16 +8,17 @@
 
 - [mixup: Beyond Empirical Risk Minimization](#1)
 - [Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
-- [CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features](#cutMix-regularization-strategy-to-train-strong-classifiers-with-localizable-features)
-- [Rethinking the Inception Architecture for Computer Vision](#rethinking-the-inception-architecture-for-computer-vision)
-- [Deep Residual Learning for Image Recognition](#deep-residual-learning-for-image-recognition)
-- [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](#efficientNet-rethinking-model-scaling-for-convolutional-neural-networks)
-- [Densely Connected Convolutional Networks](#densely-connected-convolutional-networks)
-- [SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#squeezenet-alexnet-level-accuracy-with-50x-fewer-parameters-and<0.5MB-model-size)
-- [U-Net: Convolutional Networks for Biomedical Image Segmentation](#u-net-convolutional-networks-for-biomedical-image-segmentation)
-- [UPSNet: A Unified Panoptic Segmentation Network](#upsnet-a-unified-panoptic-segmentation-network)
-- [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](#faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks)
-- [YOLOv4: Optimal Speed and Accuracy of Object Detection](#yolov4-optimal-speed-and-accuracy-of-object-detection)
+- [Going Deeper with Convolutions]
+- [CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features]
+- [Rethinking the Inception Architecture for Computer Vision]
+- [Deep Residual Learning for Image Recognition]
+- [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks]
+- [Densely Connected Convolutional Networks]
+- [SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size]
+- [U-Net: Convolutional Networks for Biomedical Image Segmentation]
+- [UPSNet: A Unified Panoptic Segmentation Network]
+- [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks]
+- [YOLOv4: Optimal Speed and Accuracy of Object Detection]
 
 ---
 
