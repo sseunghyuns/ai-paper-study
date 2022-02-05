@@ -6,19 +6,19 @@
 
 ## 논문 리스트
 
-- [mixup: Beyond Empirical Risk Minimization](#1)
-- [Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
-- [Going Deeper with Convolutions]
-- [CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features]
-- [Rethinking the Inception Architecture for Computer Vision]
-- [Deep Residual Learning for Image Recognition]
-- [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks]
-- [Densely Connected Convolutional Networks]
-- [SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size]
-- [U-Net: Convolutional Networks for Biomedical Image Segmentation]
-- [UPSNet: A Unified Panoptic Segmentation Network]
-- [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks]
-- [YOLOv4: Optimal Speed and Accuracy of Object Detection]
+- [[1] mixup: Beyond Empirical Risk Minimization](#1)
+- [[2] Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
+- Going Deeper with Convolutions
+- CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
+- Rethinking the Inception Architecture for Computer Vision
+- Deep Residual Learning for Image Recognition
+- EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
+- Densely Connected Convolutional Networks
+- SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size
+- U-Net: Convolutional Networks for Biomedical Image Segmentation
+- UPSNet: A Unified Panoptic Segmentation Network
+- Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+- YOLOv4: Optimal Speed and Accuracy of Object Detection
 
 ---
 
@@ -50,3 +50,6 @@ VGGNet의 핵심은 기존 CNN에서 사용되었던 7x7, 5x5 크기의 필터�
 정리하자면, VGGNet은 3x3 이라는 작은 필터 크기로 모델을 깊게 쌓아 학습을 진행하였고, 깊어진 모델로 인해 발생할 수 있는 과적합 문제와 gradient 불안정 문제를 각각 data augmentation과 가중치 초기화 전략으로 해결한 것이다.
 
 VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 성능을 보여 지금까지도 많은 주목을 받고 있다.
+
+---
+
