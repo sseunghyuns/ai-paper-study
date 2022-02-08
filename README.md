@@ -8,10 +8,10 @@
 
 - [[1] mixup: Beyond Empirical Risk Minimization](#1)
 - [[2] Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
+- [[3] Deep Residual Learning for Image Recognition](#3)
 - Going Deeper with Convolutions
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
 - Rethinking the Inception Architecture for Computer Vision
-- Deep Residual Learning for Image Recognition
 - EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
 - Densely Connected Convolutional Networks
 - SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size
@@ -52,4 +52,19 @@ VGGNet의 핵심은 기존 CNN에서 사용되었던 7x7, 5x5 크기의 필터�
 VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 성능을 보여 지금까지도 많은 주목을 받고 있다.
 
 ---
+
+### #3
+#### Deep Residual Learning for Image Recognition
+깊은 네트워크는 (1) gradient vanishing/exploding와 (2) degradation (of training accuracy)의 문제를 야기한다. (1)의 문제는 가중치 초기화 전략과 배치별 평균과 분산을 이용한 정규화 방법인 batch normalization 등을 통해 어느정도 해결할 수 있었다.
+
+하지만 네트워크가 점점 더 깊어짐에 따라 (1)의 문제는 여전히 발생하였고, 학습 자체가 잘 안되는 (2)의 문제도 존재했다. 이를 해결하기 위해 본 논문에서 shortcut connection 기법을 통한 Residual learning을 제안했다. 아래는 Residual learning을 구현하는 하나의 residual block의 구조를 나타낸다.
+
+<p align="center">
+<img width="450" alt="1" src="https://user-images.githubusercontent.com/63924704/153001967-f7cdb834-3a5e-4850-a27d-83edc7183ad6.png">
+</p>
+  
+Input x가 2개의 weight layers을 거친 후의 출력 결과를 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" />라고 하자. 이때 모델은 학습을 통해 최적의 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" /> 값을 찾아야 한다.  이때 모델이 기존의 unreferenced mapping인 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" />를 학습하여 최적을 찾는 것보다, <img src="https://latex.codecogs.com/svg.image?F(x)&space;:=&space;H(x)-x" title="F(x) := H(x)-x" /> 를 학습하게 하여 더욱 쉽게 최적값을 찾을 수 있도록 하는 아이디어가 바로 residual learning인 것이다. 이때 기존의 출력 결과 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" />는 <img src="https://latex.codecogs.com/svg.image?F(x)&space;&plus;&space;x" title="F(x) + x" />로 재정의된다. 
+
+---
+
 
