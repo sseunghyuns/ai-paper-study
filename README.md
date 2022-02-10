@@ -9,10 +9,10 @@
 - [[1] mixup: Beyond Empirical Risk Minimization](#1)
 - [[2] Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
 - [[3] Deep Residual Learning for Image Recognition](#3)
+- [[4] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](#4)
 - Going Deeper with Convolutions
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
 - Rethinking the Inception Architecture for Computer Vision
-- EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
 - Densely Connected Convolutional Networks
 - SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size
 - U-Net: Convolutional Networks for Biomedical Image Segmentation
@@ -66,5 +66,28 @@ VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 
 Input x가 2개의 weight layers을 거친 후의 출력 결과를 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" />라고 하자. 이때 모델은 학습을 통해 최적의 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" /> 값을 찾아야 한다.  이때 모델이 기존의 unreferenced mapping인 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" />를 학습하여 최적을 찾는 것보다, <img src="https://latex.codecogs.com/svg.image?F(x)&space;:=&space;H(x)-x" title="F(x) := H(x)-x" /> 를 학습하게 하여 더욱 쉽게 최적값을 찾을 수 있도록 하는 아이디어가 바로 residual learning인 것이다. 이때 기존의 출력 결과 <img src="https://latex.codecogs.com/svg.image?H(x)" title="H(x)" />는 <img src="https://latex.codecogs.com/svg.image?F(x)&space;&plus;&space;x" title="F(x) + x" />로 재정의된다. 
 
 ---
+
+### #4
+#### EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
+Convolutional Neural Networks(ConvNets)에서 모델의 성능을 올리는 보편적인 방법은 네트워크의 **depth**(레이어의 깊이), **width**(채널 수), **resolution**(Input 이미지의 크기)를 키우는 것이다. 논문에서는 실험적으로 이 세 가지 요소를 모두 고려하여 네트워크의 크기를 키웠을 때 성능이 올라감을 보였다. 하지만 이러한 세 가지 요소는 상호 의존적이어서, 최적의 값을 찾기 위해 tuning하는 것에는 상당한 비용이 발생한다.
+
+따라서 본 논문의 저자들은 compound scaling method를 제안하여 최적의 depth/width/resolution 조합을 tuning하는 방법론을 제안했고, 실제로 이 방법으로 ImageNet 데이터에서 SOTA를 달성했다. 이는 한정된 메모리와 모델의 성능(정확도)간의 trade-off를 고려한 scaling 방법이다. 
+
+Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="https://latex.codecogs.com/svg.image?d,&space;w,&space;r" title="d, w, r" />을 탐색한다.
+
+<img src="https://latex.codecogs.com/svg.image?\text{depth}:&space;d=\alpha^{\phi}&space;\\&space;\text{width}:&space;w=\beta^{\phi}&space;\\&space;\text{resolution}:&space;r=\gamma^{\phi}&space;\\&space;\text{s.t.}&space;\;&space;\alpha&space;\beta^2&space;\gamma^2&space;\approx&space;2&space;&space;\\&space;\alpha&space;\geq1,&space;\beta&space;\geq1,&space;\gamma&space;\geq1" title="\text{depth}: d=\alpha^{\phi} \\ \text{width}: w=\beta^{\phi} \\ \text{resolution}: r=\gamma^{\phi} \\ \text{s.t.} \; \alpha \beta^2 \gamma^2 \approx 2 \\ \alpha \geq1, \beta \geq1, \gamma \geq1" />
+
+여기서 <img src="https://latex.codecogs.com/svg.image?d,&space;w,&space;r" title="d, w, r" />는 그리드 서치를 통해 탐색하고, <img src="https://latex.codecogs.com/svg.image?\phi" title="\phi" />는 한정된 자원 내에서 사용자가 정할 수 있는 하이퍼파라미터이다. 일반적으로 네트워크의 depth를 2배로 늘릴 경우 FLOPS도 2배 증가하지만, width나 resolution를 두배로 늘릴 경우 FLOPS는 4배 증가한다. 이를 반영한 제약식이 <img src="https://latex.codecogs.com/svg.image?\alpha&space;\beta^2&space;\gamma^2&space;\approx&space;2&space;&space;" title="\alpha \beta^2 \gamma^2 \approx 2 " />인 것이다. <img src="https://latex.codecogs.com/svg.image?\phi" title="\phi" />에 따라 네트워크의 FLOPS가 <img src="https://latex.codecogs.com/svg.image?(\alpha&space;\beta^2&space;\gamma^2)^{\phi}" title="(\alpha \beta^2 \gamma^2)^{\phi}" />로 증가하므로, 논문에서는 최대 <img src="https://latex.codecogs.com/svg.image?2^{\phi}" title="2^{\phi}" /> 정도까지만 FLOPS가 증가하도록 규제하였다.
+
+또한 저자들은 EfficientNet 모델 구조를 통해 이러한 scaling 방법론의 성능을 확인하였다. EfficientNet은 MnasNet의 MBConv를 이용한 모델 구조로, scaling 정도에 따라 B0-B7까지 존재한다. 저자들은 EfficientNet-B0에서 찾은 <img src="https://latex.codecogs.com/svg.image?\alpha=1.2,&space;\beta=1.1,&space;\gamma=1.15" title="\alpha=1.2, \beta=1.1, \gamma=1.15" />의 값을 B1~B7의 모델에 적용하였고, 각각의 모델들에서 최적의 <img src="https://latex.codecogs.com/svg.image?\phi" title="\phi" />값을 찾았다고 한다. 
+
+![1](https://user-images.githubusercontent.com/63924704/153387089-8bcc0645-70c6-470d-823b-615ed07ee4be.png)
+
+
+결론적으로 본 논문에서는 네트워크의 성능을 올릴 수 있는 최적의 width, depth, resolution 조합을 간단하면서 효율적으로 찾는 방법론을 제안한 것이다.
+
+---
+
+
 
 
