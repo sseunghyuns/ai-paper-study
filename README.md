@@ -73,9 +73,9 @@ Convolutional Neural Networks(ConvNets)에서 모델의 성능을 올리는 보�
 
 따라서 본 논문의 저자들은 compound scaling method를 제안하여 최적의 depth/width/resolution 조합을 tuning하는 방법론을 제안했고, 실제로 이 방법으로 ImageNet 데이터에서 SOTA를 달성했다. 이는 한정된 메모리와 모델의 성능(정확도)간의 trade-off를 고려한 scaling 방법이다. 
 
-Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="https://latex.codecogs.com/svg.image?d,&space;w,&space;r" title="d, w, r" />을 탐색한다.
+Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="https://render.githubusercontent.com/render/math?math=d,w,r">을 탐색한다.
 
-<img src="https://latex.codecogs.com/svg.image?\text{depth}:&space;d=\alpha^{\phi}&space;\\&space;\text{width}:&space;w=\beta^{\phi}&space;\\&space;\text{resolution}:&space;r=\gamma^{\phi}&space;\\&space;\text{s.t.}&space;\;&space;\alpha&space;\beta^2&space;\gamma^2&space;\approx&space;2&space;&space;\\&space;\alpha&space;\geq1,&space;\beta&space;\geq1,&space;\gamma&space;\geq1" title="\text{depth}: d=\alpha^{\phi} \\ \text{width}: w=\beta^{\phi} \\ \text{resolution}: r=\gamma^{\phi} \\ \text{s.t.} \; \alpha \beta^2 \gamma^2 \approx 2 \\ \alpha \geq1, \beta \geq1, \gamma \geq1" />
+<img src="https://render.githubusercontent.com/render/math?math= \text{depth}: d=\alpha^{\phi} \\ \text{width}: w=\beta^{\phi} \\ \text{resolution}: r=\gamma^{\phi} \\ \text{s.t.} \; \alpha \beta^2 \gamma^2 \approx 2  \\ \alpha \geq1, \beta \geq1, \gamma \geq1">
 
 여기서 <img src="https://latex.codecogs.com/svg.image?d,&space;w,&space;r" title="d, w, r" />는 그리드 서치를 통해 탐색하고, <img src="https://latex.codecogs.com/svg.image?\phi" title="\phi" />는 한정된 자원 내에서 사용자가 정할 수 있는 하이퍼파라미터이다. 일반적으로 네트워크의 depth를 2배로 늘릴 경우 FLOPS도 2배 증가하지만, width나 resolution를 두배로 늘릴 경우 FLOPS는 4배 증가한다. 이를 반영한 제약식이 <img src="https://latex.codecogs.com/svg.image?\alpha&space;\beta^2&space;\gamma^2&space;\approx&space;2&space;&space;" title="\alpha \beta^2 \gamma^2 \approx 2 " />인 것이다. <img src="https://latex.codecogs.com/svg.image?\phi" title="\phi" />에 따라 네트워크의 FLOPS가 <img src="https://latex.codecogs.com/svg.image?(\alpha&space;\beta^2&space;\gamma^2)^{\phi}" title="(\alpha \beta^2 \gamma^2)^{\phi}" />로 증가하므로, 논문에서는 최대 <img src="https://latex.codecogs.com/svg.image?2^{\phi}" title="2^{\phi}" /> 정도까지만 FLOPS가 증가하도록 규제하였다.
 
