@@ -81,7 +81,9 @@ Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="h
 
 또한 저자들은 EfficientNet 모델 구조를 통해 이러한 scaling 방법론의 성능을 확인하였다. EfficientNet은 MnasNet의 MBConv를 이용한 모델 구조로, scaling 정도에 따라 B0-B7까지 존재한다. 저자들은 EfficientNet-B0에서 찾은 <img src="https://latex.codecogs.com/svg.image?\alpha=1.2,&space;\beta=1.1,&space;\gamma=1.15" title="\alpha=1.2, \beta=1.1, \gamma=1.15" />의 값을 B1~B7의 모델에 적용하였고, 각각의 모델들에서 최적의 <img src="https://latex.codecogs.com/svg.image?\phi" title="\phi" />값을 찾았다고 한다. 
 
-![1](https://user-images.githubusercontent.com/63924704/153387089-8bcc0645-70c6-470d-823b-615ed07ee4be.png)
+<p align="center">
+<img width="450" alt="1" src="https://user-images.githubusercontent.com/63924704/153387089-8bcc0645-70c6-470d-823b-615ed07ee4be.png">
+</p>
 
 
 결론적으로 본 논문에서는 네트워크의 성능을 올릴 수 있는 최적의 width, depth, resolution 조합을 간단하면서 효율적으로 찾는 방법론을 제안한 것이다.
