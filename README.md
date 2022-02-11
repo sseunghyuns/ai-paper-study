@@ -73,13 +73,15 @@ Convolutional Neural Networks(ConvNets)에서 모델의 성능을 올리는 보�
 
 따라서 본 논문의 저자들은 **compound scaling method**를 제안하여 최적의 depth/width/resolution 조합을 tuning하는 방법론을 제안했고, 실제로 이 방법으로 ImageNet 데이터에서 SOTA를 달성했다. 이는 한정된 메모리와 모델의 성능(정확도)간의 trade-off를 고려한 scaling 방법이다. 
 
-Compoind scaling method에서는 다음의 제약식을 만족하는 OOO을 탐색한다.
+Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="https://render.githubusercontent.com/render/math?math=d,w,r">을 탐색한다.
 
-OOO
+<p align="center">
+<img width="225" alt="스크린샷 2022-02-11 오후 10 23 30" src="https://user-images.githubusercontent.com/63924704/153599019-d028b458-af20-4795-8d2b-448229c3eca3.png">
+</p>
 
-여기서 OOO는 그리드 서치를 통해 탐색하고, OOO는 한정된 자원 내에서 사용자가 정할 수 있는 하이퍼파라미터이다. 일반적으로 네트워크의 depth를 2배로 늘릴 경우 FLOPS도 2배 증가하지만, width나 resolution를 두배로 늘릴 경우 FLOPS는 4배 증가한다. 이를 반영한 제약식이 OOO인 것이다. OOO에 따라 네트워크의 FLOPS가 OOO로 증가하므로, 논문에서는 최대 OOO 정도까지만 FLOPS가 증가하도록 규제하였다.
+여기서 <img src="https://render.githubusercontent.com/render/math?math=d,w,r">는 그리드 서치를 통해 탐색하고, <img src="https://render.githubusercontent.com/render/math?math=\phi">는 한정된 자원 내에서 사용자가 정할 수 있는 하이퍼파라미터이다. 일반적으로 네트워크의 depth를 2배로 늘릴 경우 FLOPS도 2배 증가하지만, width나 resolution를 두배로 늘릴 경우 FLOPS는 4배 증가한다. 이를 반영한 제약식이 <img src="https://render.githubusercontent.com/render/math?math=\alpha \beta^2 \gamma^2 \approx 2">인 것이다. <img src="https://render.githubusercontent.com/render/math?math=\phi">에 따라 네트워크의 FLOPS가 <img src="https://render.githubusercontent.com/render/math?math=(\alpha \beta^2 \gamma^2)^{\phi}">로 증가하므로, 논문에서는 최대 <img src="https://render.githubusercontent.com/render/math?math=2^{\phi}"> 정도까지만 FLOPS가 증가하도록 규제하였다.
 
-또한 저자들은 EfficientNet 모델 구조를 통해 이러한 scaling 방법론의 성능을 확인하였다. EfficientNet은 MnasNet의 MBConv를 이용한 모델 구조로, scaling 정도에 따라 B0-B7까지 존재한다. 저자들은 EfficientNet-B0에서 찾은 OOO의 값을 B1~B7의 모델에 적용하였고, 각각의 모델들에서 최적의 OOO값을 찾았다고 한다. 
+또한 저자들은 EfficientNet 모델 구조를 통해 이러한 scaling 방법론의 성능을 확인하였다. EfficientNet은 MnasNet의 MBConv를 이용한 모델 구조로, scaling 정도에 따라 B0-B7까지 존재한다. 저자들은 EfficientNet-B0에서 찾은 <img src="https://render.githubusercontent.com/render/math?math=\alpha=1.2, \beta=1.1, \gamma=1.15">의 값을 B1~B7의 모델에 적용하였고, 각각의 모델들에서 최적의  <img src="https://render.githubusercontent.com/render/math?math=\phi">값을 찾았다고 한다. 
 
 <p align="center">
 <img width="450" alt="1" src="https://user-images.githubusercontent.com/63924704/153387089-8bcc0645-70c6-470d-823b-615ed07ee4be.png">
