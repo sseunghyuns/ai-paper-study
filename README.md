@@ -71,7 +71,7 @@ Input x가 2개의 weight layers을 거친 후의 출력 결과를 <img src="htt
 #### EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
 Convolutional Neural Networks(ConvNets)에서 모델의 성능을 올리는 보편적인 방법은 네트워크의 **depth**(레이어의 깊이), **width**(채널 수), **resolution**(Input 이미지의 크기)를 키우는 것이다. 논문에서는 실험적으로 이 세 가지 요소를 모두 고려하여 네트워크의 크기를 키웠을 때 성능이 올라감을 보였다. 하지만 이러한 세 가지 요소는 상호 의존적이어서, 최적의 값을 찾기 위해 tuning하는 것에는 상당한 비용이 발생한다.
 
-따라서 본 논문의 저자들은 compound scaling method를 제안하여 최적의 depth/width/resolution 조합을 tuning하는 방법론을 제안했고, 실제로 이 방법으로 ImageNet 데이터에서 SOTA를 달성했다. 이는 한정된 메모리와 모델의 성능(정확도)간의 trade-off를 고려한 scaling 방법이다. 
+따라서 본 논문의 저자들은 **compound scaling method**를 제안하여 최적의 depth/width/resolution 조합을 tuning하는 방법론을 제안했고, 실제로 이 방법으로 ImageNet 데이터에서 SOTA를 달성했다. 이는 한정된 메모리와 모델의 성능(정확도)간의 trade-off를 고려한 scaling 방법이다. 
 
 Compoind scaling method에서는 다음의 제약식을 만족하는 OOO을 탐색한다.
 
