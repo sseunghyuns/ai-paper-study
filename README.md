@@ -125,3 +125,32 @@ Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segment
 U-Net은 biomedical 분야의 데이터를 분할하는 목적으로 제안됐지만, 현재 인용수가 20,000이 넘을 정도로 의료 영상뿐만 아니라 다양한 분야에서 활용되고 있다. 
 
 ---
+
+### #6
+#### Densely Connected Convolutional Networks
+ResNet의 skip-connection 구조와 유사하게, 각각의 레이어가 다른 모든 레이어와 연결되어있는 DenseNet 구조를 제안하여 여러 오픈 데이터셋에서 SOTA 성능을 달성하였다. 레이어간 연결을 최대화하여 feature 정보를 최대한 활용하겠다는 아이디어이다.
+
+DenseNet은 이전 레이어의 정보를 현재 레이블에 반영한다는 점에서 ResNet과 유사하지만, summation을 하는 ResNet과 달리 (channel-wise)concatenation을 사용한다. 
+
+<p align="center">
+<img width="500" alt="1" src="https://user-images.githubusercontent.com/63924704/153897707-2b9227db-c6e3-41b3-ae3d-cc84c5a9106b.png">
+</p>
+
+위 그림은 DenseNet을 이루는 하나의 Dense Block이다. 여기서 <img src="https://render.githubusercontent.com/render/math?math=x_l">는 <img src="https://render.githubusercontent.com/render/math?math=l">번째 레이어를 통과하는 feature이고, <img src="https://render.githubusercontent.com/render/math?math=H_l">은 (Batch Normalization → ReLU → 3x3 Conv)로 구성된 composite function이다. 
+
+이러한 Dense Block이 여러개 모여 하나의 DenseNet을 이룬다(아래 그림 참고). 이때, growth rate <img src="https://render.githubusercontent.com/render/math?math=k">는 하이퍼 파라미터로써 Dense Block 내의 채널 수를 조절한다. 
+
+<p align="center">
+<img width="800" alt="1" src="https://user-images.githubusercontent.com/63924704/153898157-0d0ed053-f84b-4371-a4f0-ba292f92fc50.png">
+</p>
+
+Dense Block의 마지막 레이어에서 나오는 feature map의 사이즈는 concatenation으로 늘어난 상태이다. 이를 downsampling하기 위해 두 Dense Block 사이에 (Batch Normalization → 1x1 Conv → 2x2 Average Pooling)으로 구성된 transition layer를 추가하였다. 
+
+이러한 네트워크 구조를 사용했을 때의 장점은 다음과 같다.  
+1. Elleviate the vanishing-gradient problem
+2. Strengthen feature propagation
+3. Encourage feature reuse
+4. Reduce the number of parameters
+5. Parameter efficiency(더 적은 파라미터수로 ResNet보다 좋은 성능을 냈다)
+
+---
