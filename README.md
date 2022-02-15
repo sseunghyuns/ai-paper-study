@@ -12,10 +12,10 @@
 - [[4] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](#4)
 - [[5] U-Net: Convolutional Networks for Biomedical Image Segmentation](#5)
 - [[6] Densely Connected Convolutional Networks](#6)
+- [[7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#7)
 - Going Deeper with Convolutions
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
 - Rethinking the Inception Architecture for Computer Vision
-- SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size
 - UPSNet: A Unified Panoptic Segmentation Network
 - Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
 - YOLOv4: Optimal Speed and Accuracy of Object Detection
@@ -154,3 +154,57 @@ Dense Block의 마지막 레이어에서 나오는 feature map의 사이즈는 c
 5. Parameter efficiency(더 적은 파라미터수로 ResNet보다 좋은 성능을 냈다)
 
 ---
+
+### #7
+#### SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size
+AlexNet 수준의 성능을 보이면서도 50배 적은 파라미터 수를 가진 SqueezeNet 구조를 제안하였다. 네트워크가 적은 파라미터 수를 가졌을 때의 장점은 다음과 같다.
+
+1. More efficient distributed training
+2. Less overhead when exporting new models to clients
+3. Feasible FPGA and embedded deployment
+
+</br>
+
+AlexNet과 비슷한 성능을 보이면서 훨씬 적은 파라미터 수를 갖도록 하기 위해 저자들은 `Fire module` 을 만들어 적용했다. 이러한 아키텍처는 아래 세 가지 전력을 기반으로 한다.  
+
+
+- **Strategy 1.** Replace 3x3 filters with 1x1 filters. 
+  
+  → 3x3보다 1x1필터가 9배 적은 파라미터 수를 갖고 있으므로, 이를 통해 파라미터 수를 줄이는 것이 가능하다.
+
+
+- **Strategy 2.** Decrease the number of input channels to 3x3 filters. 
+  
+  → 3x3 크기의 필터만을 사용하는 네트워크가 있을 때, 특정 레이어의 파라미터 수는 (number of input channels) * (number of filters) * (3*3)으로 계산된다. 여기서 strategy 1을 통해 3x3 필터를 1x1 필터로 바꾸는 것 뿐만 아니라 input channels 역시 줄여서 파라미터 수를 감소하겠다는 것이다.
+
+
+- **Strategy 3.** Downsample late in the network so that convolution layers have activation maps. 
+  
+  → 최대한 downsampling을 네트워크 뒷단에서 이루어지게 하여, 큰 activation map 정보를 계속 유지할 수 있도록 한다.
+  
+</br>
+
+##### Fire Module
+
+<p align="center">
+<img width="600" alt="1" src="https://user-images.githubusercontent.com/63924704/154033473-5a4a5d3b-2cd6-404e-ae9c-cb98f4b4d7ca.png">
+</p>
+
+- `squeeze layer` 와 `expand layer` 로 이루어져 있다.  
+- `squeeze layer` 는 오직 1x1 conv layers, `expand layer` 는 1x1와 3x3 conv layers의 조합으로 구성된다.  
+  - <img src="https://render.githubusercontent.com/render/math?math=s_{1x1}">: squeeze layer에 있는 1x1 필터의 수
+  - <img src="https://render.githubusercontent.com/render/math?math=e_{1x1}">: expand layer에 있는 1x1 필터의 수
+  - <img src="https://render.githubusercontent.com/render/math?math=e_{3x3}">: expand layer에 있는 3x3 필터의 
+- <img src="https://render.githubusercontent.com/render/math?math=s_{1x1} < (e_{1x1} + e_{3x3})"> 으로 설정하여 input channels를 조절하였다.(Strategy 2)
+
+</br>
+
+<p align="center">
+<img width="700" alt="1" src="https://user-images.githubusercontent.com/63924704/154034202-84a6d52c-ee40-4666-96c1-a70b99425ece.png">
+</p>
+
+SqueenzeNet 구조를 보여주는 그림이다. Strategy 1,2를 따르는 8개의 Fire modules를 사용하였고, Strategy 3에 따라 max-pooling layer가 상대적으로 늦게 적용되고 있다. 
+
+---
+
+
