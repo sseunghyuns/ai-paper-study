@@ -13,14 +13,15 @@
 - [[5] U-Net: Convolutional Networks for Biomedical Image Segmentation](#5)
 - [[6] Densely Connected Convolutional Networks](#6)
 - [[7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#7)
+- [[8] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](#8)
 - Going Deeper with Convolutions
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
 - Rethinking the Inception Architecture for Computer Vision
 - UPSNet: A Unified Panoptic Segmentation Network
-- Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
 - YOLOv4: Optimal Speed and Accuracy of Object Detection
 
----
+---<img width="1107" alt="스크린샷 2022-02-18 오후 11 11 58" src="https://user-images.githubusercontent.com/63924704/154698256-9201e48a-1743-4c38-8897-c5cb94946a6a.png">
+
 
 ## Quick paper reviews
 
@@ -207,4 +208,20 @@ SqueenzeNet 구조를 보여주는 그림이다. Strategy 1,2를 따르는 8개�
 
 ---
 
+### #8
+#### Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+
+본 논문이 나오기 이전까지의 object detection 분야에서는 가장 높은 성능을 달성한 SOTA 모델로 SPP-Net과 Fast R-CNN 등이 있었다. 두 모델은 그 이전에 제안되었던 R-CNN보다 상대적으로 속도가 더욱 빨랐지만, 여전히 네트워크 바깥에서 CPU 방식으로 돌아가는 region proposal 단계에서 많은 시간이 소요된다는 단점이 존재했다.
+
+본 논문에서는, 네트워크와 별개로 특정 영역을 CPU 단에서 추출했던 방식에서 벗어나 GPU에서 end-to-end로 학습이 가능한 Region Proposal Network(RPN)을 제안하여 region proposal에 필요한 시간을 획기적으로 단축하는 것은 물론, 성능 역시 향상시켰다. RPN은 어떠한 위치(bounding box)에 물체가 존재하는가(0/1)를 학습하는 모듈이다. 여기서 물체가 존재한다면(=1), 이 box 내 Object가 어떤 class인지 분류하는 것은 기존의 Fast R-CNN의 classifier 구조를 활용한다. 따라서 Faster R-CNN은 기존의 Fast R-CNN 모델 구조에 Region Propasal Network 모듈을 합친 형태인 것이다.
+
+<p align="center">
+<img width="476" alt="스크린샷 2022-02-18 오후 11 07 08" src="https://user-images.githubusercontent.com/63924704/154697545-eeab20f5-55e2-4081-9fa3-b0e7fc7cc0cb.png">
+</p>
+
+<p align="center">
+<img width="1145" alt="스크린샷 2022-02-18 오후 11 12 26" src="https://user-images.githubusercontent.com/63924704/154698335-592a612f-6552-4026-821f-9adf4287220c.png">
+</p>
+
+---
 
