@@ -20,8 +20,7 @@
 - UPSNet: A Unified Panoptic Segmentation Network
 - YOLOv4: Optimal Speed and Accuracy of Object Detection
 
----<img width="1107" alt="스크린샷 2022-02-18 오후 11 11 58" src="https://user-images.githubusercontent.com/63924704/154698256-9201e48a-1743-4c38-8897-c5cb94946a6a.png">
-
+---
 
 ## Quick paper reviews
 
