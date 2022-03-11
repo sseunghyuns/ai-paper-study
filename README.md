@@ -117,6 +117,9 @@ Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="h
 
 https://arxiv.org/abs/1505.04597
 
+코드 구현: [링크](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet)
+
+
 Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segmentation 분야에서 높은 성능을 달성하였다. U-Net은 이름에서도 알수 있다 싶이 U 형태의 네트워크 구조를 갖고 있다. Input 이미지가 들어오면 이미지의 특성을 추출하는 **contracting path**와 픽셀 단위로 예측을 하기 위해 다시 up-sampling 하는 **expansive path**가 존재한다. 일반적인 CNN 모델 구조와 달리 fully-connected layer가 존재하지 않는다. 
 
 <p align="center">
@@ -144,8 +147,6 @@ Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segment
 U-Net은 biomedical 분야의 데이터를 분할하는 목적으로 제안됐지만, 현재 인용수가 20,000이 넘을 정도로 의료 영상뿐만 아니라 다양한 분야에서 활용되고 있다. 
 
 보다 자세한 설명: [링크](https://seunghyun.oopy.io/9b26c0cf-9801-44e2-83c4-a8e5c880da23)
-
-코드 구현: [링크](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet)
 
 ---
 
