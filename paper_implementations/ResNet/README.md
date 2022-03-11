@@ -1,1 +1,1 @@
-ResNet34 Implementation
+**ResNet34 implementation using PyTorch**
