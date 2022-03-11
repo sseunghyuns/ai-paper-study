@@ -144,6 +144,7 @@ Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segment
 U-Net은 biomedical 분야의 데이터를 분할하는 목적으로 제안됐지만, 현재 인용수가 20,000이 넘을 정도로 의료 영상뿐만 아니라 다양한 분야에서 활용되고 있다. 
 
 보다 자세한 설명: [링크](https://seunghyun.oopy.io/9b26c0cf-9801-44e2-83c4-a8e5c880da23)
+구현: [링크](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet)
 
 ---
 
