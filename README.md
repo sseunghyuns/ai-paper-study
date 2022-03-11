@@ -14,11 +14,14 @@
 - [[6] Densely Connected Convolutional Networks](#6)
 - [[7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#7)
 - [[8] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](#8)
+- Show and Tell: A Neural Image Caption Generator
 - Going Deeper with Convolutions
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
 - Rethinking the Inception Architecture for Computer Vision
 - UPSNet: A Unified Panoptic Segmentation Network
 - YOLOv4: Optimal Speed and Accuracy of Object Detection
+- Attention Is All You Need
+- How Do Vision Transformers Work?
 
 ---
 
