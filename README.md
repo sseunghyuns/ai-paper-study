@@ -30,12 +30,17 @@
 ### #1
 #### mixup: Beyond Empirical Risk Minimization
 
+https://arxiv.org/abs/1710.09412
+
 * 기존 Empirical Risk Minimization(ERM) 방법으로 학습된 크고 깊은 모델들은 강력하지만 adversarial examples에 대해 memorization(과적합)과 sensitivity의 문제를 보인다. 이에 대해 mixup , 즉 convex combinations 방식의 데이터 증강 기법을 적용하여 모델의 과적합을 줄이고 예측 강건함(robustness)를 높인다.
 
 ---
 
 ### #2
 #### Very Deep Convolutional Networks for Large-Scale Image Recognition
+
+https://arxiv.org/abs/1409.1556
+
 VGGNet는 기존 `(Convolutional Layers → Pooling layers)의 반복 → Fully connected Layers` 의 전통적인 CNN 구조를 크게 벗어나지 않으면서, 레이어를 깊게 쌓아 2014 ILSVRC 이미지 분류 대회에서 2위를 달성하였다. (1위 GoogleNet)
 
 <p align="center">
@@ -64,6 +69,9 @@ VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 
 
 ### #3
 #### Deep Residual Learning for Image Recognition
+
+https://arxiv.org/abs/1512.03385
+
 깊은 네트워크는 (1) gradient vanishing/exploding와 (2) degradation (of training accuracy)의 문제를 야기한다. (1)의 문제는 가중치 초기화 전략과 배치별 평균과 분산을 이용한 정규화 방법인 batch normalization 등을 통해 어느정도 해결할 수 있었다.
 
 하지만 네트워크가 점점 더 깊어짐에 따라 (1)의 문제는 여전히 발생하였고, 학습 자체가 잘 안되는 (2)의 문제도 존재했다. 이를 해결하기 위해 본 논문에서 shortcut connection 기법을 통한 Residual learning을 제안했다. 아래는 Residual learning을 구현하는 하나의 residual block의 구조를 나타낸다.
@@ -78,6 +86,9 @@ Input x가 2개의 weight layers을 거친 후의 출력 결과를 <img src="htt
 
 ### #4
 #### EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
+
+https://arxiv.org/abs/1905.11946
+
 Convolutional Neural Networks(ConvNets)에서 모델의 성능을 올리는 보편적인 방법은 네트워크의 **depth**(레이어의 깊이), **width**(채널 수), **resolution**(Input 이미지의 크기)를 키우는 것이다. 논문에서는 실험적으로 이 세 가지 요소를 모두 고려하여 네트워크의 크기를 키웠을 때 성능이 올라감을 보였다. 하지만 이러한 세 가지 요소는 상호 의존적이어서, 최적의 값을 찾기 위해 tuning하는 것에는 상당한 비용이 발생한다.
 
 따라서 본 논문의 저자들은 **compound scaling method**를 제안하여 최적의 depth/width/resolution 조합을 tuning하는 방법론을 제안했고, 실제로 이 방법으로 ImageNet 데이터에서 SOTA를 달성했다. 이는 한정된 메모리와 모델의 성능(정확도)간의 trade-off를 고려한 scaling 방법이다. 
@@ -103,6 +114,9 @@ Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="h
 
 ### #5
 #### U-Net: Convolutional Networks for Biomedical Image Segmentation
+
+https://arxiv.org/abs/1505.04597
+
 Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segmentation 분야에서 높은 성능을 달성하였다. U-Net은 이름에서도 알수 있다 싶이 U 형태의 네트워크 구조를 갖고 있다. Input 이미지가 들어오면 이미지의 특성을 추출하는 **contracting path**와 픽셀 단위로 예측을 하기 위해 다시 up-sampling 하는 **expansive path**가 존재한다. 일반적인 CNN 모델 구조와 달리 fully-connected layer가 존재하지 않는다. 
 
 <p align="center">
@@ -135,6 +149,9 @@ U-Net은 biomedical 분야의 데이터를 분할하는 목적으로 제안됐�
 
 ### #6
 #### Densely Connected Convolutional Networks
+
+https://arxiv.org/abs/1608.06993
+
 ResNet의 skip-connection 구조와 유사하게, 각각의 레이어가 다른 모든 레이어와 연결되어있는 DenseNet 구조를 제안하여 여러 오픈 데이터셋에서 SOTA 성능을 달성하였다. 레이어간 연결을 최대화하여 feature 정보를 최대한 활용하겠다는 아이디어이다.
 
 DenseNet은 이전 레이어의 정보를 현재 레이블에 반영한다는 점에서 ResNet과 유사하지만, summation을 하는 ResNet과 달리 (channel-wise)concatenation을 사용한다. 
@@ -164,6 +181,9 @@ Dense Block의 마지막 레이어에서 나오는 feature map의 사이즈는 c
 
 ### #7
 #### SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size
+
+https://arxiv.org/abs/1602.07360
+
 AlexNet 수준의 성능을 보이면서도 50배 적은 파라미터 수를 가진 SqueezeNet 구조를 제안하였다. 네트워크가 적은 파라미터 수를 가졌을 때의 장점은 다음과 같다.
 
 1. More efficient distributed training
@@ -216,6 +236,8 @@ SqueenzeNet 구조를 보여주는 그림이다. Strategy 1,2를 따르는 8개�
 
 ### #8
 #### Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
+
+https://arxiv.org/abs/1506.01497
 
 본 논문이 나오기 이전까지의 object detection 분야에서는 가장 높은 성능을 달성한 SOTA 모델로 SPP-Net과 Fast R-CNN 등이 있었다. 두 모델은 그 이전에 제안되었던 R-CNN보다 상대적으로 속도가 더욱 빨랐지만, 여전히 네트워크 바깥에서 CPU 방식으로 돌아가는 region proposal 단계에서 많은 시간이 소요된다는 단점이 존재했다.
 
