@@ -55,6 +55,8 @@ VGGNet의 핵심은 기존 CNN에서 사용되었던 7x7, 5x5 크기의 필터�
 
 VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 성능을 보여 지금까지도 많은 주목을 받고 있다.
 
+보다 자세한 설명: [링크](https://seunghyun.oopy.io/f8970a0f-246a-4edf-8472-719ea22b179f)
+
 ---
 
 ### #3
@@ -123,6 +125,8 @@ Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segment
 </br>
 
 U-Net은 biomedical 분야의 데이터를 분할하는 목적으로 제안됐지만, 현재 인용수가 20,000이 넘을 정도로 의료 영상뿐만 아니라 다양한 분야에서 활용되고 있다. 
+
+보다 자세한 설명: [링크](https://seunghyun.oopy.io/9b26c0cf-9801-44e2-83c4-a8e5c880da23)
 
 ---
 
@@ -221,6 +225,8 @@ SqueenzeNet 구조를 보여주는 그림이다. Strategy 1,2를 따르는 8개�
 <p align="center">
 <img width="1145" alt="스크린샷 2022-02-18 오후 11 12 26" src="https://user-images.githubusercontent.com/63924704/154698335-592a612f-6552-4026-821f-9adf4287220c.png">
 </p>
+
+보다 자세한 설명: [링크](https://seunghyun.oopy.io/4bb355c8-d44a-45bb-ac1f-11acffc69d60)
 
 ---
 
