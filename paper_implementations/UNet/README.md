@@ -11,7 +11,7 @@
 </br>
 
 
-<h2 align="center"> Accuracy/Loss curve</h2>
+<h2 align="center"> Accuracy / Loss curve</h2>
 <p align="center">
 <img width="800" alt="curve" src="https://user-images.githubusercontent.com/63924704/157844757-e9e6cd81-ceb8-4457-83d3-2fff2619e72e.png">
 </p>
