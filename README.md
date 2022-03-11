@@ -14,14 +14,14 @@
 - [[6] Densely Connected Convolutional Networks](#6)
 - [[7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#7)
 - [[8] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](#8)
-- Show and Tell: A Neural Image Caption Generator
-- Going Deeper with Convolutions
-- CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
-- Rethinking the Inception Architecture for Computer Vision
-- UPSNet: A Unified Panoptic Segmentation Network
-- YOLOv4: Optimal Speed and Accuracy of Object Detection
-- Attention Is All You Need
-- How Do Vision Transformers Work?
+- Show and Tell: A Neural Image Caption Generator, https://arxiv.org/abs/1411.4555
+- Going Deeper with Convolutions, https://arxiv.org/abs/1409.4842
+- CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features, https://arxiv.org/abs/1905.04899
+- Rethinking the Inception Architecture for Computer Vision, https://arxiv.org/abs/1512.00567
+- UPSNet: A Unified Panoptic Segmentation Network, https://arxiv.org/abs/1901.03784
+- YOLOv4: Optimal Speed and Accuracy of Object Detection, https://arxiv.org/abs/2004.10934
+- Attention Is All You Need, https://arxiv.org/abs/1706.03762
+- How Do Vision Transformers Work?, https://arxiv.org/abs/2202.06709
 
 ---
 
