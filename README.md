@@ -18,6 +18,8 @@
 - Going Deeper with Convolutions, https://arxiv.org/abs/1409.4842
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features, https://arxiv.org/abs/1905.04899
 - Rethinking the Inception Architecture for Computer Vision, https://arxiv.org/abs/1512.00567
+- Auto-Encoding Variational Bayes, https://arxiv.org/abs/1312.6114
+- Generative Adversarial Networks, https://arxiv.org/abs/1406.2661
 - UPSNet: A Unified Panoptic Segmentation Network, https://arxiv.org/abs/1901.03784
 - YOLOv4: Optimal Speed and Accuracy of Object Detection, https://arxiv.org/abs/2004.10934
 - Attention Is All You Need, https://arxiv.org/abs/1706.03762
