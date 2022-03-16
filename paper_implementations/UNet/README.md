@@ -1,9 +1,10 @@
 **UNet implementation using PyTorch.**
 
+- 128x128 크기의 input을 받는 U-Net 구현 
 
-학습시 사용한 데이터셋: 구글 드라이브 [링크](https://drive.google.com/file/d/1MWLS8UcCyWKPt_VUfubYwRKb-tJD4K1l/view?usp=sharing)
+- 학습시 사용한 데이터셋: 구글 드라이브 [링크](https://drive.google.com/file/d/1MWLS8UcCyWKPt_VUfubYwRKb-tJD4K1l/view?usp=sharing)
 
-데이터셋 출처: [kaggle](https://www.kaggle.com/c/data-science-bowl-2018/data)
+- 데이터셋 출처: [kaggle](https://www.kaggle.com/c/data-science-bowl-2018/data)
 
 ---
 
