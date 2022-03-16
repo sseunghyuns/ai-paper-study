@@ -6,25 +6,25 @@
 
 ## 논문 리스트
 
-- [[1] mixup: Beyond Empirical Risk Minimization](#1)
-- [[2] Very Deep Convolutional Networks for Large-Scale Image Recognition](#2)
-- [[3] Deep Residual Learning for Image Recognition](#3)
-- [[4] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](#4)
-- [[5] U-Net: Convolutional Networks for Biomedical Image Segmentation](#5)
-- [[6] Densely Connected Convolutional Networks](#6)
-- [[7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size](#7)
-- [[8] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](#8)
-- Show and Tell: A Neural Image Caption Generator, https://arxiv.org/abs/1411.4555
-- Going Deeper with Convolutions, https://arxiv.org/abs/1409.4842
-- CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features, https://arxiv.org/abs/1905.04899
-- Rethinking the Inception Architecture for Computer Vision, https://arxiv.org/abs/1512.00567
-- Auto-Encoding Variational Bayes, https://arxiv.org/abs/1312.6114
-- Generative Adversarial Networks, https://arxiv.org/abs/1406.2661
-- Conditional Generative Adversarial Nets, https://arxiv.org/abs/1411.1784
-- UPSNet: A Unified Panoptic Segmentation Network, https://arxiv.org/abs/1901.03784
-- YOLOv4: Optimal Speed and Accuracy of Object Detection, https://arxiv.org/abs/2004.10934
-- Attention Is All You Need, https://arxiv.org/abs/1706.03762
-- How Do Vision Transformers Work?, https://arxiv.org/abs/2202.06709
+- [1] mixup: Beyond Empirical Risk Minimization | [논문](https://arxiv.org/abs/1710.09412), [설명](#1), 구현 |
+- [2] Very Deep Convolutional Networks for Large-Scale Image Recognition | [논문](https://arxiv.org/abs/1409.1556), [설명](#2), 구현 |
+- [3] Deep Residual Learning for Image Recognition | [논문](https://arxiv.org/abs/1512.03385), [설명](#3), 구현 |
+- [4] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | [논문](https://arxiv.org/abs/1905.11946), [설명](#4), 구현 | 
+- [5] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](#5), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet) |
+- [6] Densely Connected Convolutional Networks | [논문](https://arxiv.org/abs/1608.06993), [설명](#6), 구현 |
+- [7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size | [논문](https://arxiv.org/abs/1602.07360), [설명](#7), 구현 |
+- [8] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks | [논문](https://arxiv.org/abs/1506.01497), [설명](#8), 구현 |
+- Show and Tell: A Neural Image Caption Generator | [논문](https://arxiv.org/abs/1411.4555), 설명, 구현 |  
+- Going Deeper with Convolutions | [논문](https://arxiv.org/abs/1409.4842), 설명, 구현 | 
+- CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features | [논문](https://arxiv.org/abs/1905.04899), 설명, 구현 | 
+- Rethinking the Inception Architecture for Computer Vision | [논문](https://arxiv.org/abs/1512.00567), 설명, 구현 | 
+- Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
+- Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 | 
+- Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), 설명, 구현 | 
+- UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
+- YOLOv4: Optimal Speed and Accuracy of Object Detection | [논문](https://arxiv.org/abs/2004.10934), 설명, 구현 | 
+- Attention Is All You Need | [논문](https://arxiv.org/abs/1706.03762), 설명, 구현 | 
+- How Do Vision Transformers Work? | [논문](https://arxiv.org/abs/2202.06709), 설명, 구현 | 
 
 ---
 
@@ -33,16 +33,12 @@
 ### #1
 #### mixup: Beyond Empirical Risk Minimization
 
-https://arxiv.org/abs/1710.09412
-
 * 기존 Empirical Risk Minimization(ERM) 방법으로 학습된 크고 깊은 모델들은 강력하지만 adversarial examples에 대해 memorization(과적합)과 sensitivity의 문제를 보인다. 이에 대해 mixup , 즉 convex combinations 방식의 데이터 증강 기법을 적용하여 모델의 과적합을 줄이고 예측 강건함(robustness)를 높인다.
 
 ---
 
 ### #2
 #### Very Deep Convolutional Networks for Large-Scale Image Recognition
-
-https://arxiv.org/abs/1409.1556
 
 VGGNet는 기존 `(Convolutional Layers → Pooling layers)의 반복 → Fully connected Layers` 의 전통적인 CNN 구조를 크게 벗어나지 않으면서, 레이어를 깊게 쌓아 2014 ILSVRC 이미지 분류 대회에서 2위를 달성하였다. (1위 GoogleNet)
 
@@ -73,8 +69,6 @@ VGGNet은 간단한 구조와, 단일 네트워크에서 GoogleNet보다 좋은 
 ### #3
 #### Deep Residual Learning for Image Recognition
 
-https://arxiv.org/abs/1512.03385
-
 깊은 네트워크는 (1) gradient vanishing/exploding와 (2) degradation (of training accuracy)의 문제를 야기한다. (1)의 문제는 가중치 초기화 전략과 배치별 평균과 분산을 이용한 정규화 방법인 batch normalization 등을 통해 어느정도 해결할 수 있었다.
 
 하지만 네트워크가 점점 더 깊어짐에 따라 (1)의 문제는 여전히 발생하였고, 학습 자체가 잘 안되는 (2)의 문제도 존재했다. 이를 해결하기 위해 본 논문에서 shortcut connection 기법을 통한 Residual learning을 제안했다. 아래는 Residual learning을 구현하는 하나의 residual block의 구조를 나타낸다.
@@ -89,8 +83,6 @@ Input x가 2개의 weight layers을 거친 후의 출력 결과를 <img src="htt
 
 ### #4
 #### EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
-
-https://arxiv.org/abs/1905.11946
 
 Convolutional Neural Networks(ConvNets)에서 모델의 성능을 올리는 보편적인 방법은 네트워크의 **depth**(레이어의 깊이), **width**(채널 수), **resolution**(Input 이미지의 크기)를 키우는 것이다. 논문에서는 실험적으로 이 세 가지 요소를 모두 고려하여 네트워크의 크기를 키웠을 때 성능이 올라감을 보였다. 하지만 이러한 세 가지 요소는 상호 의존적이어서, 최적의 값을 찾기 위해 tuning하는 것에는 상당한 비용이 발생한다.
 
@@ -117,11 +109,6 @@ Compoind scaling method에서는 다음의 제약식을 만족하는 <img src="h
 
 ### #5
 #### U-Net: Convolutional Networks for Biomedical Image Segmentation
-
-https://arxiv.org/abs/1505.04597
-
-코드 구현: [링크](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet)
-
 
 Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segmentation 분야에서 높은 성능을 달성하였다. U-Net은 이름에서도 알수 있다 싶이 U 형태의 네트워크 구조를 갖고 있다. Input 이미지가 들어오면 이미지의 특성을 추출하는 **contracting path**와 픽셀 단위로 예측을 하기 위해 다시 up-sampling 하는 **expansive path**가 존재한다. 일반적인 CNN 모델 구조와 달리 fully-connected layer가 존재하지 않는다. 
 
@@ -156,8 +143,6 @@ U-Net은 biomedical 분야의 데이터를 분할하는 목적으로 제안됐�
 ### #6
 #### Densely Connected Convolutional Networks
 
-https://arxiv.org/abs/1608.06993
-
 ResNet의 skip-connection 구조와 유사하게, 각각의 레이어가 다른 모든 레이어와 연결되어있는 DenseNet 구조를 제안하여 여러 오픈 데이터셋에서 SOTA 성능을 달성하였다. 레이어간 연결을 최대화하여 feature 정보를 최대한 활용하겠다는 아이디어이다.
 
 DenseNet은 이전 레이어의 정보를 현재 레이블에 반영한다는 점에서 ResNet과 유사하지만, summation을 하는 ResNet과 달리 (channel-wise)concatenation을 사용한다. 
@@ -187,8 +172,6 @@ Dense Block의 마지막 레이어에서 나오는 feature map의 사이즈는 c
 
 ### #7
 #### SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size
-
-https://arxiv.org/abs/1602.07360
 
 AlexNet 수준의 성능을 보이면서도 50배 적은 파라미터 수를 가진 SqueezeNet 구조를 제안하였다. 네트워크가 적은 파라미터 수를 가졌을 때의 장점은 다음과 같다.
 
@@ -242,8 +225,6 @@ SqueenzeNet 구조를 보여주는 그림이다. Strategy 1,2를 따르는 8개�
 
 ### #8
 #### Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
-
-https://arxiv.org/abs/1506.01497
 
 본 논문이 나오기 이전까지의 object detection 분야에서는 가장 높은 성능을 달성한 SOTA 모델로 SPP-Net과 Fast R-CNN 등이 있었다. 두 모델은 그 이전에 제안되었던 R-CNN보다 상대적으로 속도가 더욱 빨랐지만, 여전히 네트워크 바깥에서 CPU 방식으로 돌아가는 region proposal 단계에서 많은 시간이 소요된다는 단점이 존재했다.
 
