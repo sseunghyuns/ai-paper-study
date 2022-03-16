@@ -14,13 +14,13 @@
 - [6] Densely Connected Convolutional Networks | [논문](https://arxiv.org/abs/1608.06993), [설명](#6), 구현 |
 - [7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size | [논문](https://arxiv.org/abs/1602.07360), [설명](#7), 구현 |
 - [8] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks | [논문](https://arxiv.org/abs/1506.01497), [설명](#8), 구현 |
+- [9] Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), [설명](#9), 구현 | 
 - Show and Tell: A Neural Image Caption Generator | [논문](https://arxiv.org/abs/1411.4555), 설명, 구현 |  
 - Going Deeper with Convolutions | [논문](https://arxiv.org/abs/1409.4842), 설명, 구현 | 
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features | [논문](https://arxiv.org/abs/1905.04899), 설명, 구현 | 
 - Rethinking the Inception Architecture for Computer Vision | [논문](https://arxiv.org/abs/1512.00567), 설명, 구현 | 
 - Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
 - Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 | 
-- Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), 설명, 구현 | 
 - UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
 - You Only Look Once: Unified, Real-Time Object Detection | [논문](https://arxiv.org/abs/1506.02640), 설명, 구현 |
 - YOLOv4: Optimal Speed and Accuracy of Object Detection | [논문](https://arxiv.org/abs/2004.10934), 설명, 구현 | 
@@ -243,3 +243,24 @@ SqueenzeNet 구조를 보여주는 그림이다. Strategy 1,2를 따르는 8개�
 
 ---
 
+### #9
+#### Conditional Generative Adversarial Nets
+
+기존 GAN 구조에 조건을 주어 모델의 데이터 생성을 특정 방향으로 유도할 수 있다는 것이 본 논문의 핵심이다. 이때 조건으로 사용되는 추가적인 정보는 class labels, 데이터의 특정 부분 inpainting, 다른 modality의 데이터 등 여러가지 형태로 존재할 수 있다. 
+
+GAN을 우선 살펴보면, 두 개의 적대적 모델로 이루어져 있다. 
+- A generative model **G**: 데이터의 분포를 capture
+- A discriminator model **D**: G에 의해 생성된 데이터가 training set에서 온 것인지 판단
+
+G와 D는 아래의 목적식을 최소화하는 방향으로 동시에 학습이 진행된다. 
+
+- Generator(G): <img src="https://latex.codecogs.com/svg.image?\bg{white}log(1-D(G(z))" title="https://latex.codecogs.com/svg.image?\bg{white}log(1-D(G(z))" />
+- Discriminator(D): <img src="https://latex.codecogs.com/svg.image?\bg{white}log(D(x))" title="https://latex.codecogs.com/svg.image?\bg{white}log(D(x))" />
+
+이때 추가적인 정보 <img src="https://latex.codecogs.com/svg.image?\bg{white}y" title="https://latex.codecogs.com/svg.image?\bg{white}y" />가 주어지면 conditional model로 확장될 수 있다. <img src="https://latex.codecogs.com/svg.image?\bg{white}y" title="https://latex.codecogs.com/svg.image?\bg{white}y" />는 class labels 혹은 다른 modality의 데이터 등 어떠한 형태로든 존재할 수 있다.  이러한 <img src="https://latex.codecogs.com/svg.image?\bg{white}y" title="https://latex.codecogs.com/svg.image?\bg{white}y" />를 D와 G 에게 feeding함으로써 condition을 주는 것이다. 
+
+<p align="center">
+<img width="500" src="https://user-images.githubusercontent.com/63924704/158572477-63fa3af6-06f0-4df0-b8ab-2fb53b035b8f.png">
+</p>
+
+---
