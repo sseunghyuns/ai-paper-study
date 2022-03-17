@@ -19,6 +19,7 @@
 - Going Deeper with Convolutions | [논문](https://arxiv.org/abs/1409.4842), 설명, 구현 | 
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features | [논문](https://arxiv.org/abs/1905.04899), 설명, 구현 | 
 - Rethinking the Inception Architecture for Computer Vision | [논문](https://arxiv.org/abs/1512.00567), 설명, 구현 | 
+- Stacked Hourglass Networks for Human Pose Estimation | [논문](https://arxiv.org/abs/1603.06937), 설명, 구현 |
 - Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
 - Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 | 
 - UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
