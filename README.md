@@ -8,7 +8,7 @@
 
 - [1] mixup: Beyond Empirical Risk Minimization | [논문](https://arxiv.org/abs/1710.09412), [설명](#1), 구현 |
 - [2] Very Deep Convolutional Networks for Large-Scale Image Recognition | [논문](https://arxiv.org/abs/1409.1556), [설명](#2), 구현 |
-- [3] Deep Residual Learning for Image Recognition | [논문](https://arxiv.org/abs/1512.03385), [설명](#3), 구현 |
+- [3] Deep Residual Learning for Image Recognition | [논문](https://arxiv.org/abs/1512.03385), [설명](#3), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/ResNet) |
 - [4] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | [논문](https://arxiv.org/abs/1905.11946), [설명](#4), 구현 | 
 - [5] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](#5), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet) |
 - [6] Densely Connected Convolutional Networks | [논문](https://arxiv.org/abs/1608.06993), [설명](#6), 구현 |
