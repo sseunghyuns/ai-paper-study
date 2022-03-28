@@ -23,6 +23,8 @@
 - Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
 - Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 | 
 - UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
+- SSD: Single Shot MultiBox Detector | [논문](https://arxiv.org/abs/1512.02325), 설명, 구현 |
+- Focal Loss for Dense Object Detection | [논문](https://arxiv.org/abs/1708.02002), 설명, 구현 |
 - Feature Pyramid Networks for Object Detection | [논문](https://arxiv.org/abs/1612.03144), 설명, 구현 |
 - You Only Look Once: Unified, Real-Time Object Detection | [논문](https://arxiv.org/abs/1506.02640), 설명, 구현 |
 - YOLOv4: Optimal Speed and Accuracy of Object Detection | [논문](https://arxiv.org/abs/2004.10934), 설명, 구현 | 
