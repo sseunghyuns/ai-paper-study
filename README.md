@@ -25,7 +25,9 @@
 - UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
 - SSD: Single Shot MultiBox Detector | [논문](https://arxiv.org/abs/1512.02325), 설명, 구현 |
 - Focal Loss for Dense Object Detection | [논문](https://arxiv.org/abs/1708.02002), 설명, 구현 |
+- Cascade R-CNN: Delving into High Quality Object Detection | [논문](https://arxiv.org/abs/1712.00726), 설명, 구현 |
 - Feature Pyramid Networks for Object Detection | [논문](https://arxiv.org/abs/1612.03144), 설명, 구현 |
+- Path Aggregation Network for Instance Segmentation | [논문](https://arxiv.org/abs/1803.01534), 설명, 구현 |
 - You Only Look Once: Unified, Real-Time Object Detection | [논문](https://arxiv.org/abs/1506.02640), 설명, 구현 |
 - YOLOv4: Optimal Speed and Accuracy of Object Detection | [논문](https://arxiv.org/abs/2004.10934), 설명, 구현 | 
 - Weighted boxes fusion: Ensembling boxes from different object detection models | [논문](https://arxiv.org/abs/1910.13302), 설명, 구현 |
