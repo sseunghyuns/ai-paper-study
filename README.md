@@ -34,6 +34,7 @@
 - Attention Is All You Need | [논문](https://arxiv.org/abs/1706.03762), 설명, 구현 | 
 - How Do Vision Transformers Work? | [논문](https://arxiv.org/abs/2202.06709), 설명, 구현 | 
 - Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks | [논문](https://arxiv.org/abs/1703.03400), 설명, 구현 |
+- EAST: An Efficient and Accurate Scene Text Detector | [논문](https://arxiv.org/abs/1704.03155), 설명, 구현 |
 
 ---
 
