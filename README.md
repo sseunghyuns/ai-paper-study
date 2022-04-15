@@ -263,7 +263,7 @@ GAN을 우선 살펴보면, 두 개의 적대적 모델로 이루어져 있다.
 
 G와 D는 아래의 목적식을 최소화하는 방향으로 동시에 학습이 진행된다. 
 
-- Generator(G): <img src="https://latex.codecogs.com/svg.image?\bg{white}log(1-D(G(z))" title="https://latex.codecogs.com/svg.image?\bg{white}log(1-D(G(z))" />
+- Generator(G): <img src="https://latex.codecogs.com/svg.image?log(1-D(G(z))" title="https://latex.codecogs.com/svg.image?log(1-D(G(z))" />
 - Discriminator(D): <img src="https://latex.codecogs.com/svg.image?\bg{white}log(D(x))" title="https://latex.codecogs.com/svg.image?\bg{white}log(D(x))" />
 
 이때 추가적인 정보 <img src="https://latex.codecogs.com/svg.image?\bg{white}y" title="https://latex.codecogs.com/svg.image?\bg{white}y" />가 주어지면 conditional model로 확장될 수 있다. <img src="https://latex.codecogs.com/svg.image?\bg{white}y" title="https://latex.codecogs.com/svg.image?\bg{white}y" />는 class labels 혹은 다른 modality의 데이터 등 어떠한 형태로든 존재할 수 있다.  이러한 <img src="https://latex.codecogs.com/svg.image?\bg{white}y" title="https://latex.codecogs.com/svg.image?\bg{white}y" />를 D와 G 에게 feeding함으로써 condition을 주는 것이다. 
