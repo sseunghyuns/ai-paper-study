@@ -21,7 +21,8 @@
 - Rethinking the Inception Architecture for Computer Vision | [논문](https://arxiv.org/abs/1512.00567), 설명, 구현 | 
 - Stacked Hourglass Networks for Human Pose Estimation | [논문](https://arxiv.org/abs/1603.06937), 설명, 구현 |
 - Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
-- Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 | 
+- Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 |
+- Image-to-Image Translation with Conditional Adversarial Networks | [논문](Image-to-Image Translation with Conditional Adversarial Networks), 설명, 구현 | 
 - UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
 - SSD: Single Shot MultiBox Detector | [논문](https://arxiv.org/abs/1512.02325), 설명, 구현 |
 - Focal Loss for Dense Object Detection | [논문](https://arxiv.org/abs/1708.02002), 설명, 구현 |
