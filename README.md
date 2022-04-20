@@ -15,6 +15,7 @@
 - [7] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size | [논문](https://arxiv.org/abs/1602.07360), [설명](#7), 구현 |
 - [8] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks | [논문](https://arxiv.org/abs/1506.01497), [설명](#8), 구현 |
 - [9] Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), [설명](#9), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/cGAN) | 
+- [10] Image-to-Image Translation with Conditional Adversarial Networks | [논문](https://arxiv.org/abs/1611.07004), [설명](#10), 구현 | 
 - Show and Tell: A Neural Image Caption Generator | [논문](https://arxiv.org/abs/1411.4555), 설명, 구현 |  
 - Going Deeper with Convolutions | [논문](https://arxiv.org/abs/1409.4842), 설명, 구현 | 
 - CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features | [논문](https://arxiv.org/abs/1905.04899), 설명, 구현 | 
@@ -22,7 +23,6 @@
 - Stacked Hourglass Networks for Human Pose Estimation | [논문](https://arxiv.org/abs/1603.06937), 설명, 구현 |
 - Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
 - Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 |
-- Image-to-Image Translation with Conditional Adversarial Networks | [논문](Image-to-Image Translation with Conditional Adversarial Networks), 설명, 구현 | 
 - UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
 - SSD: Single Shot MultiBox Detector | [논문](https://arxiv.org/abs/1512.02325), 설명, 구현 |
 - Focal Loss for Dense Object Detection | [논문](https://arxiv.org/abs/1708.02002), 설명, 구현 |
@@ -272,5 +272,19 @@ G와 D는 아래의 목적식을 최소화하는 방향으로 동시에 학습�
 <p align="center">
 <img width="500" src="https://user-images.githubusercontent.com/63924704/158572477-63fa3af6-06f0-4df0-b8ab-2fb53b035b8f.png">
 </p>
+
+---
+
+### #10
+#### Image-to-Image Translation with Conditional Adversarial Networks
+
+<p align="center">
+<img width="800" src="https://user-images.githubusercontent.com/63924704/164194116-1e7afd20-91fb-4e2d-a3cd-a587a7de0d16.png">
+</p>
+
+Image-to-Image translation 적용 사례들에서 각각의 task별 이미지의 특성이 다르지만, 본 논문에서는 Pix2Pix 모델 구조의 동일한 방법을 사용하여 유의미한 결과를 도출했다. 지금까지 제안되었던 방법들은 각각의 task에 맞는 loss나 모델 구조를 제안했다면, 본 논문에서는 다양한 task에 일반화할 수 있는 방법을 제안한 것이다.
+
+보다 자세한 설명: [링크](https://seunghyun.oopy.io/2ac5e525-90d8-4083-bc9a-b913ad3db1f4)
+
 
 ---
