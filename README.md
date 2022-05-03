@@ -7,11 +7,11 @@
 ## 논문 리스트
 
 ### Classification
-- [1] Very Deep Convolutional Networks for Large-Scale Image Recognition | [논문](https://arxiv.org/abs/1409.1556), [설명](#2), 구현 |
-- [2] Deep Residual Learning for Image Recognition | [논문](https://arxiv.org/abs/1512.03385), [설명](#3), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Classification/ResNet) |
-- [3] Densely Connected Convolutional Networks | [논문](https://arxiv.org/abs/1608.06993), [설명](#6), 구현 |
-- [4] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size | [논문](https://arxiv.org/abs/1602.07360), [설명](#7), 구현 |
-- [5] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | [논문](https://arxiv.org/abs/1905.11946), [설명](#4), 구현 | 
+- [1] Very Deep Convolutional Networks for Large-Scale Image Recognition | [논문](https://arxiv.org/abs/1409.1556), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Classification#1), 구현 |
+- [2] Deep Residual Learning for Image Recognition | [논문](https://arxiv.org/abs/1512.03385), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Classification#2), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Classification/ResNet) |
+- [3] Densely Connected Convolutional Networks | [논문](https://arxiv.org/abs/1608.06993), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Classification#3), 구현 |
+- [4] SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size | [논문](https://arxiv.org/abs/1602.07360), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Classification#4), 구현 |
+- [5] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | [논문](https://arxiv.org/abs/1905.11946), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Classification#5), 구현 | 
 - [6] Going Deeper with Convolutions | [논문](https://arxiv.org/abs/1409.4842), 설명, 구현 | 
 - [7] Rethinking the Inception Architecture for Computer Vision | [논문](https://arxiv.org/abs/1512.00567), 설명, 구현 | 
 
@@ -21,7 +21,7 @@
 - [3] Multi-Scale Context Aggregation by Dilated Convolutions | [논문](https://arxiv.org/abs/1511.07122), 설명, 구현 |
 - [4] Learning Deconvolution Network for Semantic Segmentation | [논문](https://arxiv.org/abs/1505.04366), 설명, 구현 |
 - [5] Pyramid Scene Parsing Network | [논문](https://arxiv.org/abs/1612.01105), 설명, 구현 |
-- [6] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](#5), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/UNet) |
+- [6] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/UNet) |
 - [7] UNet++: A Nested U-Net Architecture for Medical Image Segmentation | [논문](https://arxiv.org/abs/1807.10165), 설명, 구현 |
 - [8] UNet 3+: A Full-Scale Connected UNet for Medical Image Segmentation | [논문](https://arxiv.org/abs/2004.08790), 설명, 구현 |
 - [9] Deep High-Resolution Representation Learning for Visual Recognition | [논문](https://arxiv.org/abs/1908.07919), 설명, 구현 |
@@ -30,7 +30,7 @@
 - [12] Path Aggregation Network for Instance Segmentation | [논문](https://arxiv.org/abs/1803.01534), 설명, 구현 |
 
 ### Object Detection
-- [1] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks | [논문](https://arxiv.org/abs/1506.01497), [설명](#8), 구현 |
+- [1] Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks | [논문](https://arxiv.org/abs/1506.01497), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Detection#1), 구현 |
 - [2] Feature Pyramid Networks for Object Detection | [논문](https://arxiv.org/abs/1612.03144), 설명, 구현 |
 - [3] SSD: Single Shot MultiBox Detector | [논문](https://arxiv.org/abs/1512.02325), 설명, 구현 |
 - [4] Focal Loss for Dense Object Detection | [논문](https://arxiv.org/abs/1708.02002), 설명, 구현 |
@@ -40,8 +40,8 @@
 
 ### Generative Models
 - [1] Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 |
-- [2] Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), [설명](#9), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/cGAN) | 
-- [3] Image-to-Image Translation with Conditional Adversarial Networks | [논문](https://arxiv.org/abs/1611.07004), [설명](#10), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/Pix2Pix) | 
+- [2] Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/cGAN) | 
+- [3] Image-to-Image Translation with Conditional Adversarial Networks | [논문](https://arxiv.org/abs/1611.07004), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models#2), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/Pix2Pix) | 
 - [4] Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
 
 ### Transformers
@@ -51,7 +51,7 @@
 - [4] Swin Transformer: Hierarchical Vision Transformer using Shifted Windows | [논문](https://arxiv.org/abs/2103.14030), 설명, 구현 |
 
 ### Data Augmentation
-- [1] mixup: Beyond Empirical Risk Minimization | [논문](https://arxiv.org/abs/1710.09412), [설명](#1), 구현 |
+- [1] mixup: Beyond Empirical Risk Minimization | [논문](https://arxiv.org/abs/1710.09412), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Others#1), 구현 |
 - [2] CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features | [논문](https://arxiv.org/abs/1905.04899), 설명, 구현 | 
 
 ### Ensembles
