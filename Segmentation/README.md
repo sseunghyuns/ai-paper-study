@@ -1,15 +1,15 @@
 ## 논문 리스트
 
 ### Segmentation
-- [1] Fully Convolutional Networks for Semantic Segmentation | [논문](https://arxiv.org/abs/1411.4038), 설명, 구현 |
+- [1] Fully Convolutional Networks for Semantic Segmentation | [논문](https://arxiv.org/abs/1411.4038), 설명, [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/FCN) |
 - [2] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs | [논문](https://arxiv.org/abs/1412.7062), 설명, 구현 |
 - [3] Multi-Scale Context Aggregation by Dilated Convolutions | [논문](https://arxiv.org/abs/1511.07122), 설명, 구현 |
-- [4] Learning Deconvolution Network for Semantic Segmentation | [논문](https://arxiv.org/abs/1505.04366), 설명, 구현 |
+- [4] Learning Deconvolution Network for Semantic Segmentation | [논문](https://arxiv.org/abs/1505.04366), 설명, [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/DeconvNet) |
 - [5] Pyramid Scene Parsing Network | [논문](https://arxiv.org/abs/1612.01105), 설명, 구현 |
 - [6] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet) |
 - [7] UNet++: A Nested U-Net Architecture for Medical Image Segmentation | [논문](https://arxiv.org/abs/1807.10165), 설명, 구현 |
 - [8] UNet 3+: A Full-Scale Connected UNet for Medical Image Segmentation | [논문](https://arxiv.org/abs/2004.08790), 설명, 구현 |
-- [9] Deep High-Resolution Representation Learning for Visual Recognition | [논문](https://arxiv.org/abs/1908.07919), [설명](https://seunghyun.oopy.io/c43330b2-4cf7-4a1a-bb8f-80ba61e10808), 구현 |
+- [9] Deep High-Resolution Representation Learning for Visual Recognition | [논문](https://arxiv.org/abs/1908.07919), [설명](#2), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/HRNet) |
 - [10] UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
 - [11] Mask R-CNN | [논문](https://arxiv.org/abs/1703.06870), 설명, 구현 |
 - [12] Path Aggregation Network for Instance Segmentation | [논문](https://arxiv.org/abs/1803.01534), 설명, 구현 |
@@ -48,5 +48,20 @@ Fully-convolutional network로 이루어진 U-Net 구조를 제안하여 segment
 U-Net은 biomedical 분야의 데이터를 분할하는 목적으로 제안됐지만, 현재 인용수가 20,000이 넘을 정도로 의료 영상뿐만 아니라 다양한 분야에서 활용되고 있다. 
 
 보다 자세한 설명: [링크](https://seunghyun.oopy.io/9b26c0cf-9801-44e2-83c4-a8e5c880da23)
+
+---
+
+### #2
+#### Deep High-Resolution Representation Learning for Visual Recognition
+
+<p align="center">
+<img width="1009" alt="스크린샷 2022-05-10 오후 9 34 58" src="https://user-images.githubusercontent.com/63924704/167629435-0a3bfc69-366e-4500-838f-1174e6cfd84b.png">
+</p>
+
+입력부터 출력까지 높은 해상도를 유지하여 Position-sensitive task에 적합한 backbone 제안하였다. 
+
+- Position-sensitive task: 영상 내 위치 정보가 중요한 task(e.g. semantic segmentation, human pose estimation, object detection)
+
+보다 자세한 설명: [링크](https://seunghyun.oopy.io/c43330b2-4cf7-4a1a-bb8f-80ba61e10808)
 
 ---
