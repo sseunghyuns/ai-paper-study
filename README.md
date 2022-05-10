@@ -24,7 +24,7 @@
 - [6] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/UNet) |
 - [7] UNet++: A Nested U-Net Architecture for Medical Image Segmentation | [논문](https://arxiv.org/abs/1807.10165), 설명, 구현 |
 - [8] UNet 3+: A Full-Scale Connected UNet for Medical Image Segmentation | [논문](https://arxiv.org/abs/2004.08790), 설명, 구현 |
-- [9] Deep High-Resolution Representation Learning for Visual Recognition | [논문](https://arxiv.org/abs/1908.07919), 설명, 구현 |
+- [9] Deep High-Resolution Representation Learning for Visual Recognition | [논문](https://arxiv.org/abs/1908.07919), [설명](https://seunghyun.oopy.io/c43330b2-4cf7-4a1a-bb8f-80ba61e10808), 구현 |
 - [10] UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
 - [11] Mask R-CNN | [논문](https://arxiv.org/abs/1703.06870), 설명, 구현 |
 - [12] Path Aggregation Network for Instance Segmentation | [논문](https://arxiv.org/abs/1803.01534), 설명, 구현 |
