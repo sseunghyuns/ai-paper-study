@@ -1,7 +1,7 @@
 import argparse
 
 class Args(object):
-    parser = argparse.ArgumentParser(description='Arguments for U-Net segmentation')
+    parser = argparse.ArgumentParser(description='Arguments for Segmentation models')
     parser.add_argument('--model', default='unet')
     parser.add_argument('--device', type=str, default="cuda")
     parser.add_argument('--batch_size', type=int, default=32)
