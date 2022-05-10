@@ -16,15 +16,15 @@
 - [7] Rethinking the Inception Architecture for Computer Vision | [논문](https://arxiv.org/abs/1512.00567), 설명, 구현 | 
 
 ### Segmentation
-- [1] Fully Convolutional Networks for Semantic Segmentation | [논문](https://arxiv.org/abs/1411.4038), 설명, 구현 |
+- [1] Fully Convolutional Networks for Semantic Segmentation | [논문](https://arxiv.org/abs/1411.4038), 설명, [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/FCN) |
 - [2] Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs | [논문](https://arxiv.org/abs/1412.7062), 설명, 구현 |
 - [3] Multi-Scale Context Aggregation by Dilated Convolutions | [논문](https://arxiv.org/abs/1511.07122), 설명, 구현 |
-- [4] Learning Deconvolution Network for Semantic Segmentation | [논문](https://arxiv.org/abs/1505.04366), 설명, 구현 |
+- [4] Learning Deconvolution Network for Semantic Segmentation | [논문](https://arxiv.org/abs/1505.04366), 설명, [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/DeconvNet) |
 - [5] Pyramid Scene Parsing Network | [논문](https://arxiv.org/abs/1612.01105), 설명, 구현 |
-- [6] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/UNet) |
+- [6] U-Net: Convolutional Networks for Biomedical Image Segmentation | [논문](https://arxiv.org/abs/1505.04597), [설명](#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/UNet) |
 - [7] UNet++: A Nested U-Net Architecture for Medical Image Segmentation | [논문](https://arxiv.org/abs/1807.10165), 설명, 구현 |
 - [8] UNet 3+: A Full-Scale Connected UNet for Medical Image Segmentation | [논문](https://arxiv.org/abs/2004.08790), 설명, 구현 |
-- [9] Deep High-Resolution Representation Learning for Visual Recognition | [논문](https://arxiv.org/abs/1908.07919), [설명](https://seunghyun.oopy.io/c43330b2-4cf7-4a1a-bb8f-80ba61e10808), 구현 |
+- [9] Deep High-Resolution Representation Learning for Visual Recognition | [논문](https://arxiv.org/abs/1908.07919), [설명](#2), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Segmentation/HRNet) |
 - [10] UPSNet: A Unified Panoptic Segmentation Network | [논문](https://arxiv.org/abs/1901.03784), 설명, 구현 | 
 - [11] Mask R-CNN | [논문](https://arxiv.org/abs/1703.06870), 설명, 구현 |
 - [12] Path Aggregation Network for Instance Segmentation | [논문](https://arxiv.org/abs/1803.01534), 설명, 구현 |
