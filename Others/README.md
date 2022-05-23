@@ -10,6 +10,9 @@
 - [1] mixup: Beyond Empirical Risk Minimization | [논문](https://arxiv.org/abs/1710.09412), [설명](#1), 구현 |
 - [2] CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features | [논문](https://arxiv.org/abs/1905.04899), 설명, 구현 | 
 
+### 3D
+- [1] PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation | [논문](https://arxiv.org/abs/1612.00593), 설명, 구현 |
+
 ### Ensembles
 - [1] Weighted boxes fusion: Ensembling boxes from different object detection models | [논문](https://arxiv.org/abs/1910.13302), 설명, 구현 |
 
