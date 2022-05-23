@@ -7,16 +7,26 @@
 ---
 
 
-<h2 align="center"> Architecture</h2>
+<h2 align="center"> PointNet Architecture </h2>
 
 <p align="center">
-<img width="800" alt="1" src="https://user-images.githubusercontent.com/63924704/158000774-6817435f-0b01-4712-af50-7a44b1feb0b0.png">
+<img width="800" alt="1" src="https://user-images.githubusercontent.com/63924704/169829494-baa1654f-1198-4fb7-b27a-de3683bc02c3.png">
 </p>
 
 </br>
 
 
-<h2 align="center"> Accuracy / Loss curve</h2>
+<h2 align="center"> Part Segmentation Model Details</h2>
+
 <p align="center">
-<img width="800" alt="curve" src="https://user-images.githubusercontent.com/63924704/157844757-e9e6cd81-ceb8-4457-83d3-2fff2619e72e.png">
+<img width="500" alt="1" src="https://user-images.githubusercontent.com/63924704/169829740-7d492934-266f-4f19-b542-6a2a438865b5.png">
 </p>
+
+</br>
+
+
+<h2 align="center"> Valid mIoU / Accuracy / Loss curve</h2>
+<p align="center">
+<img width="1000" alt="curve" src="https://user-images.githubusercontent.com/63924704/169830384-58bc2285-4e43-4c9c-bd95-abddb9e4cbe2.png">
+</p>
+
