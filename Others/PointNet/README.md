@@ -25,7 +25,7 @@
 </br>
 
 
-<h2 align="center"> Valid mIoU / Accuracy / Loss curve</h2>
+<h2 align="center"> Valid Accuracy / mIoU / Loss curve</h2>
 <p align="center">
 <img width="1000" alt="curve" src="https://user-images.githubusercontent.com/63924704/169830384-58bc2285-4e43-4c9c-bd95-abddb9e4cbe2.png">
 </p>
