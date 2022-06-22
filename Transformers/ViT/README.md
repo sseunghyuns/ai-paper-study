@@ -12,7 +12,7 @@
 
 ---
 
-**Generate image patches(input_patch.py/ImageToPatch)**
+**Generate image patches(input_patch.py)**
 
 - This is an example of patch generation. 
 - width, height = 512, 384
