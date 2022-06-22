@@ -8,6 +8,7 @@
 
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+Transformers/ViT/data
 
 # IPython
 profile_default/
