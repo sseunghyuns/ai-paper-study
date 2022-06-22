@@ -23,3 +23,7 @@
 ![patch_img](https://user-images.githubusercontent.com/63924704/174772049-17e3d936-0736-41cb-a1a6-fc6faf5cd4fc.jpg)
 
 ---
+
+**ViT implementation in model.py**
+
+<img width="800" alt="vit" src="https://user-images.githubusercontent.com/63924704/175024778-b98af135-5a90-49d3-88a8-9ffdfa89220f.png">
