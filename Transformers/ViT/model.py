@@ -36,7 +36,7 @@ class MSA(nn.Module):
         self.latent_vector_size = latent_vector_size
         self.head_dim = int(latent_vector_size / num_heads) # D_h = (D/k)
         
-        self.Q = nn.Linear(latent_vector_size, latent_vector_size) # [D] -> [k*D_h(D_h=D/k)] : Multi head가 한번에 계산된다는 의미
+        self.Q = nn.Linear(latent_vector_size, latent_vector_size) # [D] -> [k*D_h(D_h=D/k)] : Multi head가 한번에 계산된다.
         self.K = nn.Linear(latent_vector_size, latent_vector_size)
         self.V = nn.Linear(latent_vector_size, latent_vector_size)
         
