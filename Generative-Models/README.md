@@ -7,8 +7,8 @@
 ### Generative Models
 
 - [1] Generative Adversarial Networks | [논문](https://arxiv.org/abs/1406.2661), 설명, 구현 |
-- [2] Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), [설명](#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/cGAN) | 
-- [3] Image-to-Image Translation with Conditional Adversarial Networks | [논문](https://arxiv.org/abs/1611.07004), [설명](#2), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/paper_implementations/Pix2Pix) | 
+- [2] Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), [설명](#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/cGAN) | 
+- [3] Image-to-Image Translation with Conditional Adversarial Networks | [논문](https://arxiv.org/abs/1611.07004), [설명](#2), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/Pix2Pix) | 
 - [4] Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
 - [5] Denoising Diffusion Probabilistic Models | [논문](https://arxiv.org/abs/2006.11239), 설명, 구현 |
 - [6] Generative Modeling by Estimating Gradients of the Data Distribution | [논문](https://arxiv.org/abs/1907.05600), 설명, 구현 |
