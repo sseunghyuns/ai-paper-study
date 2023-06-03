@@ -43,7 +43,7 @@
 - [2] Conditional Generative Adversarial Nets | [논문](https://arxiv.org/abs/1411.1784), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models#1), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/cGAN) | 
 - [3] Image-to-Image Translation with Conditional Adversarial Networks | [논문](https://arxiv.org/abs/1611.07004), [설명](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models#2), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/Pix2Pix) | 
 - [4] Auto-Encoding Variational Bayes | [논문](https://arxiv.org/abs/1312.6114), 설명, 구현 | 
-- [5] Denoising Diffusion Probabilistic Models | [논문](https://arxiv.org/abs/2006.11239), 설명, 구현 |
+- [5] Denoising Diffusion Probabilistic Models | [논문](https://arxiv.org/abs/2006.11239), 설명, [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/DDPM) |
 - [6] Generative Modeling by Estimating Gradients of the Data Distribution | [논문](https://arxiv.org/abs/1907.05600), [설명](https://www.notion.so/Generative-Modeling-by-Estimating-Gradients-of-the-Data-Distribution-62ea88740ca34975a637138cbbb408f4?pvs=4), [구현](https://github.com/sseunghyuns/ai-paper-study/tree/main/Generative-Models/NCSN) |
 
 ### Transformers
