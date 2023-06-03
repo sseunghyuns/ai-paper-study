@@ -2,7 +2,9 @@
 
 </br>
 
-$\begin{align} & \overbrace{\text{Image}(x_0) \text{ → noise → noise}(x_t) \ \text{→ … → noise}(x_T)}^{\color{green}{\text{Forward Process(Non parameterized)}}} \\[5pt] &\underbrace{\text{Image}(x_0) \text{ ← noise ← noise}(x_t) \text{ ← … ← noise}(x_T)}_{\color{violet}\text{Reverse process(Parameterized)}} \end{align}$
+$\overbrace{\text{Image}(x_0) \text{ → noise → noise}(x_t) \ \text{→ … → noise}(x_T)}^{\color{green}{\text{Forward Process(Non parameterized)}}}$
+
+$\underbrace{\text{Image}(x_0) \text{ ← noise ← noise}(x_t) \text{ ← … ← noise}(x_T)}_{\color{violet}\text{Reverse process(Parameterized)}}$
 
 Diffusion 모델도 VAE, GAN 등과 같이 latent variable $z$를 조건부로 하여 true data distribution인 $q(x_0)$를 근사하는 $p_{\theta}(x|z)$를 학습시켜 새로운 데이터를 sampling하는 모델이다. 이를 위해 먼저 input data $x_0$을 $z$로 mapping하는 **forward process**를 거치게 된다. VAE에서 encoder에 해당하는 부분이다. 하지만 VAE와는 다르게, Diffusion의 forward process는 학습 대상이 아니다. 사전에 정의된 schedule에 따라 총 $T$ 스텝에 걸쳐 $x_0$에 gaussian noise를 조금씩 더하여, 최종적으로 $x_T$를 완전한 gaussian noise가 되게끔 만드는 것이다. 그 후, 다시 $x_T$에서 시작하여 Markov chain으로 정의된 $T$번의 **reverse process** $p_{\theta}(x_{t-1}|x_t)$를 거친 $p_{\theta}(x|z)$가 true data distribution $q(x_0)$와 비슷해지도록 학습을 진행한다. 
 
